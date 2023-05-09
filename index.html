@@ -61,7 +61,6 @@
         border-top: 1px dashed silver;
         margin: 1rem 0;
       }
-
     </style>
   </head>
 </html>
@@ -83,7 +82,6 @@
   <hr />
 
   <section>
-    <h2>Monitoring</h2>
     <a
       href="https://www.twilio.com/console/report-center/spaces/EIc59e04ae33259b281aac662b5a87929c"
       ><img
@@ -118,34 +116,30 @@
   <hr />
 
   <section>
-    <h2>Development</h2>
+    <h2>Development 🚧</h2>
 
     <a href="https://github.com/global-121/121-platform/releases/latest"
       ><img
         alt="GitHub latest release"
         src="https://img.shields.io/github/v/release/global-121/121-platform?include_prereleases&label=latest%20release&sort=semver&style=flat-square&logo=github"
     /></a>
+    <br />
+    <a href="https://github.com/global-121/121-platform/actions"
+      ><img
+        alt="GitHub Actions: All"
+        src="https://img.shields.io/static/v1?style=flat-square&logo=github&logoColor=white&color=blue&label=GitHub+Actions&message=All"
+    /></a>
   </section>
 
   <hr />
 
   <section>
-    <h2>Test</h2>
-
-    <a href="https://github.com/global-121/121-platform/actions">
-      <img
-        alt="GitHub Actions"
-        src="https://img.shields.io/badge/GitHub Actions-All-blue?style=flat-square&logo=github&logoColor=white"
-      />
-    </a>
-
-    <br />
-    <br />
+    <h2>Test 🚨</h2>
 
     <a href="https://test-vm.121.global/121-service/docs/"
       ><img
-        alt="Status: 121-service"
-        src="https://img.shields.io/website?label=TEST:+121-service&labelColor=hotpink&style=flat-square&url=https://test-vm.121.global/121-service/docs/"
+        alt="Status: 121-service VM"
+        src="https://img.shields.io/website?url=https://test-vm.121.global/121-service/docs/&labelColor=hotpink&style=flat-square&label=TEST:+121-service+VM"
     /></a>
 
     <a href="https://test-vm.121.global/VERSION.txt"
@@ -154,10 +148,28 @@
         src="https://img.shields.io/badge/endpoint?url=https://test-vm.121.global/121-service/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[test-VM]"
     /></a>
 
+    <br />
+    <br />
+
+    <a href="https://121-test.azurewebsites.net/docs/"
+      ><img
+        alt="Status: 121-service [test]"
+        src="https://img.shields.io/website?url=https://121-test.azurewebsites.net/docs/&labelColor=hotpink&style=flat-square&label=121-service+[test]"
+    /></a>
+
+    <br />
+
     <a href="https://121-test.azurewebsites.net/docs/"
       ><img
         alt="Service: 121-service [test]"
         src="https://img.shields.io/badge/endpoint?url=https://121-test.azurewebsites.net/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[test]"
+    /></a>
+
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_test_service.yml"
+      ><img
+        alt="Status: Deploy [test] 121-service"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_test_service.yml/badge.svg"
     /></a>
 
     <br />
@@ -167,6 +179,12 @@
         alt="Interface: Portal [test]"
         src="https://img.shields.io/badge/endpoint?url=https://portal.test.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[test]"
     /></a>
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_test_portal.yml"
+      ><img
+        alt="Status: Deploy [test] Portal"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_test_portal.yml/badge.svg"
+    /></a>
 
     <br />
 
@@ -174,6 +192,12 @@
       ><img
         alt="Interface: Verification App [test]"
         src="https://img.shields.io/badge/endpoint?url=https://verification.test.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Verification+App+[test]"
+    /></a>
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_test_verification.yml"
+      ><img
+        alt="Status: Deploy [test] Verification App"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_test_verification.yml/badge.svg"
     /></a>
 
     <br />
@@ -183,30 +207,27 @@
         alt="Interface: Registration App [test]"
         src="https://img.shields.io/badge/endpoint?url=https://registration.test.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Registration+App+[test]"
     /></a>
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_test_registration.yml"
+      ><img
+        alt="Status: Deploy [test] Registration App"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_test_registration.yml/badge.svg"
+    /></a>
   </section>
 
   <hr />
 
   <section>
-    <h2>Staging</h2>
+    <h2>Staging 🎭</h2>
 
-    Deployments:<br />
-    <a
-      href="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_all.yml"
-    >
-      <img
-        alt="GitHub deployments"
-        src="https://img.shields.io/github/deployments/global-121/121-platform/test?label=Deploy:+Test/Staging&logo=github&style=flat-square"
-      />
-      <img
-        alt="Status: Deploy [staging] All"
-        src="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_all.yml/badge.svg"
-      />
-    </a>
+    <!-- Old VM: -->
+    <a href="https://staging.121.global/121-service/docs/"
+      ><img
+        alt="Status: Staging: 121-service VM"
+        src="https://img.shields.io/website?url=https://staging.121.global/121-service/docs/&labelColor=blueviolet&style=flat-square&label=Staging:+121-service+VM" /></a
+    ><br /><br />
+    <!-- / Old VM: -->
 
-    <br />
-
-    Monitoring:<br />
     <a
       href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510global/providers/microsoft.portal/dashboards/e541ee28-3c55-4daf-9740-fcc5cc429287"
       ><img
@@ -217,22 +238,25 @@
     <br />
     <br />
 
-    <a href="https://staging.121.global/121-service/docs/"
+    <a href="https://121-test-staging.azurewebsites.net/docs/"
       ><img
-        alt="Status: Staging: 121-service"
-        src="https://img.shields.io/website?label=Staging:+121-service&labelColor=blueviolet&style=flat-square&url=https://staging.121.global/121-service/docs/"
+        alt="Status: 121-service [staging]"
+        src="https://img.shields.io/website?url=https://121-test-staging.azurewebsites.net/docs/&labelColor=blueviolet&style=flat-square&label=121-service+[staging]"
     /></a>
 
-    <a href="https://staging.121.global/VERSION.txt"
-      ><img
-        alt="Service: 121-service [staging-VM]"
-        src="https://img.shields.io/badge/endpoint?url=https://staging.121.global/121-service/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[staging-VM]"
-    /></a>
+    <br />
 
     <a href="https://121-test-staging.azurewebsites.net/docs/"
       ><img
         alt="Service: 121-service [staging]"
         src="https://img.shields.io/badge/endpoint?url=https://121-test-staging.azurewebsites.net/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[staging]"
+    /></a>
+
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_service.yml"
+      ><img
+        alt="Status: Deploy [staging] 121-service"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_service.yml/badge.svg"
     /></a>
 
     <br />
@@ -243,6 +267,12 @@
         alt="Interface: Portal [staging]"
         src="https://img.shields.io/badge/endpoint?url=https://happy-rock-0411d2003-staging.westeurope.3.azurestaticapps.net/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[staging]"
     /></a>
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_portal.yml"
+      ><img
+        alt="Status: Deploy [staging] Portal"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_portal.yml/badge.svg"
+    /></a>
 
     <br />
 
@@ -251,6 +281,12 @@
       ><img
         alt="Interface: Verification App [staging]"
         src="https://img.shields.io/badge/endpoint?url=https://brave-sand-08d7e2903-staging.westeurope.3.azurestaticapps.net/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Verification+App+[staging]"
+    /></a>
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_verification.yml"
+      ><img
+        alt="Status: Deploy [staging] Verification"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_verification.yml/badge.svg"
     /></a>
 
     <br />
@@ -261,26 +297,33 @@
         alt="Interface: Registration App [staging]"
         src="https://img.shields.io/badge/endpoint?url=https://ambitious-bay-0af9abd03-staging.westeurope.3.azurestaticapps.net/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Registration+App+[staging]"
     /></a>
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_registration.yml"
+      ><img
+        alt="Status: Deploy [staging] Registration"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_registration.yml/badge.svg"
+    /></a>
+
+    <br />
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_all.yml"
+      ><img
+        alt="Status: Deploy [staging] All"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_all.yml/badge.svg"
+    /></a>
   </section>
 
   <hr />
 
   <section>
-    <h2>NLRC</h2>
-
-    Deployments:<br />
-    <a
-      href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_all.yml"
+    <h2>NLRC 🇳🇱</h2>
+    <!-- Old VM: -->
+    <a href="https://nlrc.121.global/121-service/docs/"
       ><img
-        alt="GitHub deployments"
-        src="https://img.shields.io/github/deployments/global-121/121-platform/client-nlrc?label=Deploy:+NLRC&logo=github&style=flat-square" /><img
-        alt="Status: Deploy [NLRC] All"
-        src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_all.yml/badge.svg"
-    /></a>
-
-    <br />
-
-    Monitoring:<br />
+        alt="Status: NLRC: 121-service VM"
+        src="https://img.shields.io/website?url=https://nlrc.121.global/121-service/docs/&style=flat-square&label=NLRC:+121-service+VM" /></a
+    ><br /><br />
+    <!-- / Old VM: -->
 
     <a
       href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510global/providers/microsoft.portal/dashboards/6d159546-263f-4a37-aa40-e89dc04cd1c5"
@@ -292,22 +335,25 @@
     <br />
     <br />
 
-    <a href="https://nlrc.121.global/121-service/docs/"
+    <a href="https://121-nlrc.azurewebsites.net/docs/"
       ><img
-        alt="Status: NLRC: 121-service"
-        src="https://img.shields.io/website?label=NLRC:+121-service&labelColor=blueviolet&style=flat-square&url=https://nlrc.121.global/121-service/docs/"
+        alt="Status: 121-service [NLRC]"
+        src="https://img.shields.io/website?url=https://121-nlrc.azurewebsites.net/docs/&style=flat-square&label=121-service+[NLRC]"
     /></a>
 
-    <a href="https://nlrc.121.global/VERSION.txt"
-      ><img
-        alt="Service: 121-service [NLRC-VM]"
-        src="https://img.shields.io/badge/endpoint?url=https://nlrc.121.global/VERSION.json&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[NLRC-VM]"
-    /></a>
+    <br />
 
     <a href="https://121-nlrc.azurewebsites.net/docs/"
       ><img
         alt="Service: 121-service [NLRC]"
         src="https://img.shields.io/badge/endpoint?url=https://121-nlrc.azurewebsites.net/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[NLRC]"
+    /></a>
+
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_service.yml"
+      ><img
+        alt="Status: Deploy [NLRC] 121-service"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_service.yml/badge.svg"
     /></a>
 
     <br />
@@ -317,6 +363,12 @@
         alt="Interface: Portal [NLRC]"
         src="https://img.shields.io/badge/endpoint?url=https://portal.nlrc.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[NLRC]"
     /></a>
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_portal.yml"
+      ><img
+        alt="Status: Deploy [NLRC] Portal"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_portal.yml/badge.svg"
+    /></a>
 
     <br />
 
@@ -325,8 +377,21 @@
         alt="Interface: Registration App [NLRC]"
         src="https://img.shields.io/badge/endpoint?url=https://registration.nlrc.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Registration+App+[NLRC]"
     /></a>
-  </section>
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_registration.yml"
+      ><img
+        alt="Status: Deploy [NLRC] Registration"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_registration.yml/badge.svg"
+    /></a>
 
+    <br />
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_all.yml"
+      ><img
+        alt="Status: Deploy [NLRC] All"
+        src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_all.yml/badge.svg"
+    /></a>
+  </section>
   <hr />
 
   <h2>HAC</h2>
