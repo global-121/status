@@ -1,0 +1,8 @@
+{
+    "recommendations": [
+        "ms-vscode.live-server",
+        "editorconfig.editorconfig",
+        "anteprimorac.html-end-tag-labels",
+        "esbenp.prettier-vscode"
+    ]
+}
