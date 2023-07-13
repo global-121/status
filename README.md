@@ -1,3 +1,3 @@
-# 121-platform Status Dashboard
+# 121-Patform Status
 
 See: <https://status.121.global/>
