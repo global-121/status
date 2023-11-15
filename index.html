@@ -28,13 +28,22 @@
     />
 
     <style>
+      :root {
+        accent-color: #e9a6a5;
+      }
       body {
-        font: 100% / 1.333 monospace, monospace;
+        font: 100% / 1.5 monospace, monospace;
         margin: 0;
         padding: 0;
         background: #fff;
         color: #444;
         text-align: center;
+      }
+
+      a {
+        color: #e9a6a5;
+        font-weight: bold;
+        display: inline-block;
       }
 
       h1 {
@@ -50,20 +59,14 @@
         vertical-align: middle;
       }
 
-      a {
-        color: #e9a6a5;
-        font-weight: bold;
+      h2:first-of-type {
+        margin-block-start: 0;
       }
 
-      section {
-        margin: 2rem 0;
-      }
       footer,
-      section + section {
+      section {
+        padding: 1rem 0;
         border-top: 1px dashed silver;
-      }
-      footer {
-        padding: 2rem 0;
       }
     </style>
   </head>
@@ -107,9 +110,6 @@
   </section>
 
   <section id="monitoring">
-    <br />
-    <br />
-
     <a
       href="https://www.twilio.com/console/sms/insights/delivery?x-target-region=us1&&q=KGRpcmVjdGlvbjpPVVRCT1VORCxmaWx0ZXJzOiEoKGZpZWxkOnN0YXR1cyxmaWx0ZXJfdHlwZTpFUVVBTFMsdmFsdWVzOiEoVU5ERUxJVkVSRUQsRkFJTEVEKSksKGZpZWxkOm1lc3NhZ2luZ19hcHBfc2lkLGZpbHRlcl90eXBlOkVRVUFMUyx2YWx1ZXM6IShNR2FjOTYwZGQ2MjkyYzM5ZGQ0ZjNlMzdjYzdiNTQyMzUxKSksKGZpZWxkOmVycm9yX2NvZGUsZmlsdGVyX3R5cGU6Tk9UX0VRVUFMUyx2YWx1ZXM6ISgnNjMwMDMnKSkpLHRpbWVSYW5nZUZpbHRlclByZXNldDonUGFzdCUyMDI0JTIwaG91cnMnLHZpZXdUeXBlOmxpc3Qtb2YtbWVzc2FnZXMp"
       ><img
