@@ -55,11 +55,15 @@
         font-weight: bold;
       }
 
-      hr {
-        height: 1px;
-        border: none;
+      section {
+        margin: 2rem 0;
+      }
+      footer,
+      section + section {
         border-top: 1px dashed silver;
-        margin: 1rem 0;
+      }
+      footer {
+        padding: 2rem 0;
       }
     </style>
   </head>
@@ -79,9 +83,7 @@
     </h1>
   </header>
 
-  <hr />
-
-  <section>
+  <section id="status">
     <a href="https://githubstatus.com/"
       ><img
         alt="GitHub status"
@@ -104,9 +106,10 @@
     /></a>
   </section>
 
-  <hr />
+  <section id="monitoring">
+    <br />
+    <br />
 
-  <section>
     <a
       href="https://www.twilio.com/console/sms/insights/delivery?x-target-region=us1&&q=KGRpcmVjdGlvbjpPVVRCT1VORCxmaWx0ZXJzOiEoKGZpZWxkOnN0YXR1cyxmaWx0ZXJfdHlwZTpFUVVBTFMsdmFsdWVzOiEoVU5ERUxJVkVSRUQsRkFJTEVEKSksKGZpZWxkOm1lc3NhZ2luZ19hcHBfc2lkLGZpbHRlcl90eXBlOkVRVUFMUyx2YWx1ZXM6IShNR2FjOTYwZGQ2MjkyYzM5ZGQ0ZjNlMzdjYzdiNTQyMzUxKSksKGZpZWxkOmVycm9yX2NvZGUsZmlsdGVyX3R5cGU6Tk9UX0VRVUFMUyx2YWx1ZXM6ISgnNjMwMDMnKSkpLHRpbWVSYW5nZUZpbHRlclByZXNldDonUGFzdCUyMDI0JTIwaG91cnMnLHZpZXdUeXBlOmxpc3Qtb2YtbWVzc2FnZXMp"
       ><img
@@ -167,9 +170,7 @@
     /></a>
   </section>
 
-  <hr />
-
-  <section>
+  <section id="development">
     <h2>Development 🚧</h2>
 
     <a href="https://github.com/global-121/121-platform/releases/latest"
@@ -185,9 +186,7 @@
     /></a>
   </section>
 
-  <hr />
-
-  <section>
+  <section id="test">
     <h2>Test 🚨</h2>
 
     <a href="https://test.121.global/docs/"
@@ -259,9 +258,7 @@
     /></a>
   </section>
 
-  <hr />
-
-  <section>
+  <section id="staging">
     <h2>Staging 🎭</h2>
 
     <a
@@ -320,13 +317,8 @@
     /></a>
   </section>
 
-
-  <hr />
-
-  <section>
-    <h2>
-      Demo 🟧
-    </h2>
+  <section id="demo">
+    <h2>Demo 🟧</h2>
 
     <a
       href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/7e6e8da5-0c95-4b39-b4be-3c1b1f9c3756-dashboard"
@@ -374,13 +366,9 @@
         alt="Interface: Register App [Demo]"
         src="https://img.shields.io/badge/endpoint?url=https://register.demo.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App+[Demo]"
     /></a>
-
-    <br />
   </section>
 
-  <hr />
-
-  <section>
+  <section id="nlrc">
     <h2>
       NLRC
       <img
@@ -436,13 +424,9 @@
         alt="Interface: Register App [NLRC]"
         src="https://img.shields.io/badge/endpoint?url=https://register.nlrc.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App+[NLRC]"
     /></a>
-
-    <br />
   </section>
 
-  <hr />
-
-  <section>
+  <section id="jrethiopia">
     <h2>
       Joint Response Ethiopia
       <img
@@ -498,15 +482,11 @@
         alt="Interface: Register App [jrethiopia]"
         src="https://img.shields.io/badge/endpoint?url=https://register.jrethiopia.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App+[jrethiopia]"
     /></a>
-
-    <br />
   </section>
 
-  <hr />
-
-  <section>
+  <section id="kenya">
     <h2>
-      KRCS
+      Kenya
       <img
         alt=""
         title="🇰🇪"
@@ -560,12 +540,9 @@
         alt="Interface: Register App [KRCS]"
         src="https://img.shields.io/badge/endpoint?url=https://register.krcs.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App+[KRCS]"
     /></a>
-
-    <br />
   </section>
 
-  <hr />
-  <section>
+  <section id="rwanda">
     <h2>
       Rwanda
       <img
@@ -613,13 +590,9 @@
         alt="Interface: Portal [Rwanda]"
         src="https://img.shields.io/badge/endpoint?url=https://portal.rwanda.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[Rwanda]"
     /></a>
-
-    <br />
   </section>
 
-  <hr />
-
-  <section>
+  <section id="greece">
     <h2>
       Greece
       <img
@@ -667,20 +640,13 @@
         alt="Interface: Portal [Greece]"
         src="https://img.shields.io/badge/endpoint?url=https://portal.greece.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[Greece]"
     /></a>
-
-    <br />
   </section>
 
-  <hr />
-
-  <br />
-  <br />
-
-  <a href="https://github.com/global-121/status"
-    ><img
-      src="https://img.shields.io/badge/GitHub-view%20source-blue?logo=github"
-      alt="View Source on GitHub"
-  /></a>
-
-  <br />
+  <footer>
+    <a href="https://github.com/global-121/status"
+      ><img
+        src="https://img.shields.io/badge/GitHub-view%20source-blue?logo=github"
+        alt="View Source on GitHub"
+    /></a>
+  </footer>
 </body>
