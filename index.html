@@ -2,6 +2,7 @@
 
 <head>
   <meta charset="utf-8" />
+
   <title>121 Status</title>
 
   <!--
@@ -30,6 +31,9 @@
   <style>
     :root {
       accent-color: #e9a6a5;
+    }
+    * {
+      box-sizing: border-box;
     }
     body {
       font: 100% / 1.5 monospace, monospace;
@@ -65,8 +69,21 @@
 
     footer,
     section {
-      padding: 1rem 0;
+      padding: 1rem 2rem;
       border-top: 1px dashed silver;
+    }
+    .instance .versions,
+    .instance .status,
+    .instance {
+      display: inline-block;
+      vertical-align: top;
+      width: 45%;
+    }
+    .instance .status {
+      text-align: start;
+    }
+    .instance .versions {
+      text-align: end;
     }
   </style>
 </head>
@@ -85,6 +102,14 @@
       </a>
     </h1>
   </header>
+
+  <section id="release">
+    <a href="https://github.com/global-121/121-platform/releases/latest"
+      ><img
+        alt="GitHub latest release"
+        src="https://img.shields.io/github/v/release/global-121/121-platform?include_prereleases&label=latest%20release&sort=semver&style=flat-square&logo=github"
+    /></a>
+  </section>
 
   <section id="status">
     <a href="https://githubstatus.com/"
@@ -110,23 +135,6 @@
   </section>
 
   <section id="monitoring">
-    <a
-      href="https://www.twilio.com/console/sms/insights/delivery?x-target-region=us1&&q=KGRpcmVjdGlvbjpPVVRCT1VORCxmaWx0ZXJzOiEoKGZpZWxkOnN0YXR1cyxmaWx0ZXJfdHlwZTpFUVVBTFMsdmFsdWVzOiEoVU5ERUxJVkVSRUQsRkFJTEVEKSksKGZpZWxkOm1lc3NhZ2luZ19hcHBfc2lkLGZpbHRlcl90eXBlOkVRVUFMUyx2YWx1ZXM6IShNR2FjOTYwZGQ2MjkyYzM5ZGQ0ZjNlMzdjYzdiNTQyMzUxKSksKGZpZWxkOmVycm9yX2NvZGUsZmlsdGVyX3R5cGU6Tk9UX0VRVUFMUyx2YWx1ZXM6ISgnNjMwMDMnKSkpLHRpbWVSYW5nZUZpbHRlclByZXNldDonUGFzdCUyMDI0JTIwaG91cnMnLHZpZXdUeXBlOmxpc3Qtb2YtbWVzc2FnZXMp"
-      ><img
-        alt="Twilio: Message Deliverability Insights"
-        src="https://img.shields.io/badge/Twilio-Message%20Deliverability%20Insights-lightblue?style=flat-square&logo=twilio&logoColor=white"
-    /></a>
-
-    <a
-      href="https://www.twilio.com/console/debugger?groupBy=webhook&query=121.global"
-      ><img
-        alt="Twilio: Webhook Error Logs"
-        src="https://img.shields.io/badge/Twilio-Webhook%20Error%20Logs-lightblue?style=flat-square&logo=twilio&logoColor=white"
-    /></a>
-
-    <br />
-    <br />
-
     <a
       href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/1deaf824-df7a-4774-8dc4-0b4ad5bcaede"
       ><img
@@ -177,21 +185,22 @@
         alt="Azure Dashboard: Debug Demo"
         src="https://img.shields.io/badge/Azure%20Dashboard-Debug%20Demo-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
     /></a>
-  </section>
 
-  <section id="development">
-    <h2>Development 🚧</h2>
-
-    <a href="https://github.com/global-121/121-platform/releases/latest"
-      ><img
-        alt="GitHub latest release"
-        src="https://img.shields.io/github/v/release/global-121/121-platform?include_prereleases&label=latest%20release&sort=semver&style=flat-square&logo=github"
-    /></a>
     <br />
-    <a href="https://github.com/global-121/121-platform/actions"
+    <br />
+
+    <a
+      href="https://www.twilio.com/console/sms/insights/delivery?x-target-region=us1&&q=KGRpcmVjdGlvbjpPVVRCT1VORCxmaWx0ZXJzOiEoKGZpZWxkOnN0YXR1cyxmaWx0ZXJfdHlwZTpFUVVBTFMsdmFsdWVzOiEoVU5ERUxJVkVSRUQsRkFJTEVEKSksKGZpZWxkOm1lc3NhZ2luZ19hcHBfc2lkLGZpbHRlcl90eXBlOkVRVUFMUyx2YWx1ZXM6IShNR2FjOTYwZGQ2MjkyYzM5ZGQ0ZjNlMzdjYzdiNTQyMzUxKSksKGZpZWxkOmVycm9yX2NvZGUsZmlsdGVyX3R5cGU6Tk9UX0VRVUFMUyx2YWx1ZXM6ISgnNjMwMDMnKSkpLHRpbWVSYW5nZUZpbHRlclByZXNldDonUGFzdCUyMDI0JTIwaG91cnMnLHZpZXdUeXBlOmxpc3Qtb2YtbWVzc2FnZXMp"
       ><img
-        alt="GitHub Actions: All"
-        src="https://img.shields.io/static/v1?style=flat-square&logo=github&logoColor=white&color=blue&label=GitHub+Actions&message=All"
+        alt="Twilio: Message Deliverability Insights"
+        src="https://img.shields.io/badge/Twilio-Message%20Deliverability%20Insights-lightblue?style=flat-square&logo=twilio&logoColor=white"
+    /></a>
+
+    <a
+      href="https://www.twilio.com/console/debugger?groupBy=webhook&query=121.global"
+      ><img
+        alt="Twilio: Webhook Error Logs"
+        src="https://img.shields.io/badge/Twilio-Webhook%20Error%20Logs-lightblue?style=flat-square&logo=twilio&logoColor=white"
     /></a>
   </section>
 
@@ -211,7 +220,8 @@
         src="https://img.shields.io/badge/Docker%20logs-Test-lightblue?style=flat-square&logo=docker&logoColor=white"
     /></a>
 
-    <a href="https://github.com/global-121/121-platform/actions/workflows/deploy_test_all.yml"
+    <a
+      href="https://github.com/global-121/121-platform/actions/workflows/deploy_test_all.yml"
       ><img
         alt="Status: Deploy [test] All"
         src="https://github.com/global-121/121-platform/actions/workflows/deploy_test_all.yml/badge.svg"
@@ -222,7 +232,7 @@
     <a href="https://test.121.global/docs/"
       ><img
         alt="Service: 121-service [test]"
-        src="https://img.shields.io/badge/endpoint?url=https://test.121.global/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[test]"
+        src="https://img.shields.io/badge/endpoint?url=https://test.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service+[test]"
     /></a>
     <a
       href="https://github.com/global-121/121-platform/actions/workflows/deploy_test_service.yml"
@@ -274,7 +284,20 @@
     /></a>
   </section>
 
-  <section id="staging">
+  <section id="deployment">
+    <h2>Deployments 🏗️</h2>
+
+    <a href="https://github.com/global-121/121-platform/actions"
+      ><img
+        alt="GitHub Actions: All"
+        src="https://img.shields.io/static/v1?style=flat-square&logo=github&logoColor=white&color=blue&label=GitHub+Actions&message=All"
+    /></a>
+  </section>
+
+  <section
+    id="staging"
+    class="instance"
+  >
     <h2>Staging 🎭</h2>
 
     <a
@@ -290,57 +313,59 @@
         src="https://img.shields.io/badge/Docker%20logs-Staging-lightblue?style=flat-square&logo=docker&logoColor=white"
     /></a>
 
-    <br />
-    <br />
+    <p class="status">
+      
+      <a
+        href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-test/slots/staging/appServices"
+        ><img
+          alt="Azure App Service [staging]"
+          src="https://img.shields.io/website?url=https://staging.121.global/docs/&labelColor=blueviolet&style=flat-square&label=121-service+[staging]"
+      /></a>
+      <a
+        href="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_all.yml"
+        ><img
+          alt="Status: Deploy [staging] All"
+          src="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_all.yml/badge.svg"
+      /></a>
+    </p>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-test/slots/staging/appServices"
-      ><img
-        alt="Azure App Service [staging]"
-        src="https://img.shields.io/website?url=https://staging.121.global/docs/&labelColor=blueviolet&style=flat-square&label=121-service+[staging]"
-    /></a>
-
-    <a
-      href="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_all.yml"
-      ><img
-        alt="Status: Deploy [staging] All"
-        src="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_all.yml/badge.svg"
-    /></a>
-
-    <br />
-
-    <a href="https://staging.121.global/docs/"
-      ><img
-        alt="Service: 121-service [staging]"
-        src="https://img.shields.io/badge/endpoint?url=https://staging.121.global/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[staging]"
-    /></a>
-
-    <br />
-
-    <a href="https://portal.staging.121.global/"
-      ><img
-        alt="Interface: Portal [staging]"
-        src="https://img.shields.io/badge/endpoint?url=https://portal.staging.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[staging]"
-    /></a>
-
-    <br />
-
-    <a href="https://verify.staging.121.global/"
-      ><img
-        alt="Interface: Verify App [staging]"
-        src="https://img.shields.io/badge/endpoint?url=https://verify.staging.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Verify+App+[staging]"
-    /></a>
-
-    <br />
-
-    <a href="https://register.staging.121.global/"
-      ><img
-        alt="Interface: Register App [staging]"
-        src="https://img.shields.io/badge/endpoint?url=https://register.staging.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App+[staging]"
-    /></a>
+    <p class="versions">
+      <a href="https://staging.121.global/docs/"
+        ><img
+          alt="Service: 121-service [staging]"
+          src="https://img.shields.io/badge/endpoint?url=https://staging.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
+      /></a>
+  
+      <br />
+  
+      <a href="https://portal.staging.121.global/"
+        ><img
+          alt="Interface: Portal [staging]"
+          src="https://img.shields.io/badge/endpoint?url=https://portal.staging.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
+      /></a>
+  
+      <br />
+  
+      <a href="https://verify.staging.121.global/"
+        ><img
+          alt="Interface: Verify App [staging]"
+          src="https://img.shields.io/badge/endpoint?url=https://verify.staging.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Verify+App"
+      /></a>
+  
+      <br />
+  
+      <a href="https://register.staging.121.global/"
+        ><img
+          alt="Interface: Register App [staging]"
+          src="https://img.shields.io/badge/endpoint?url=https://register.staging.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App"
+      /></a>
+    </p>
   </section>
 
-  <section id="demo">
+  <section
+    id="demo"
+    class="instance"
+  >
     <h2>
       Demo
       <img
@@ -363,57 +388,59 @@
         src="https://img.shields.io/badge/Docker%20logs-Demo-lightblue?style=flat-square&logo=docker&logoColor=white"
     /></a>
 
-    <br />
-    <br />
+    <p class="status">
+      <a
+        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-demo/appServices"
+        ><img
+          alt="Azure App Service [Demo]"
+          src="https://img.shields.io/website?url=https://demo.121.global/docs/&style=flat-square&label=121-service+[Demo]"
+      /></a>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-demo/appServices"
-      ><img
-        alt="Azure App Service [Demo]"
-        src="https://img.shields.io/website?url=https://demo.121.global/docs/&style=flat-square&label=121-service+[Demo]"
-    /></a>
+      <a
+        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-demo_all.yml"
+        ><img
+          alt="Status: Deploy [Demo] All"
+          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-demo_all.yml/badge.svg"
+      /></a>
+    </p>
 
-    <a
-      href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-demo_all.yml"
-      ><img
-        alt="Status: Deploy [Demo] All"
-        src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-demo_all.yml/badge.svg"
-    /></a>
+    <p class="versions">
+      <a href="https://demo.121.global/docs/"
+        ><img
+          alt="Service: 121-service [Demo]"
+          src="https://img.shields.io/badge/endpoint?url=https://demo.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
+      /></a>
 
-    <br />
+      <br />
 
-    <a href="https://demo.121.global/docs/"
-      ><img
-        alt="Service: 121-service [Demo]"
-        src="https://img.shields.io/badge/endpoint?url=https://demo.121.global/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[Demo]"
-    /></a>
+      <a href="https://portal.demo.121.global/"
+        ><img
+          alt="Interface: Portal [Demo]"
+          src="https://img.shields.io/badge/endpoint?url=https://portal.demo.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
+      /></a>
 
-    <br />
+      <br />
 
-    <a href="https://portal.demo.121.global/"
-      ><img
-        alt="Interface: Portal [Demo]"
-        src="https://img.shields.io/badge/endpoint?url=https://portal.demo.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[Demo]"
-    /></a>
+      <a href="https://verify.demo.121.global/"
+        ><img
+          alt="Interface: Verify App [demo]"
+          src="https://img.shields.io/badge/endpoint?url=https://verify.demo.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Verify+App"
+      /></a>
 
-    <br />
+      <br />
 
-    <a href="https://verify.demo.121.global/"
-      ><img
-        alt="Interface: Verify App [demo]"
-        src="https://img.shields.io/badge/endpoint?url=https://verify.demo.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Verify+App+[demo]"
-    /></a>
-
-    <br />
-
-    <a href="https://register.demo.121.global/"
-      ><img
-        alt="Interface: Register App [Demo]"
-        src="https://img.shields.io/badge/endpoint?url=https://register.demo.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App+[Demo]"
-    /></a>
+      <a href="https://register.demo.121.global/"
+        ><img
+          alt="Interface: Register App [Demo]"
+          src="https://img.shields.io/badge/endpoint?url=https://register.demo.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App"
+      /></a>
+    </p>
   </section>
 
-  <section id="nlrc">
+  <section
+    id="nlrc"
+    class="instance"
+  >
     <h2>
       NLRC
       <img
@@ -436,49 +463,50 @@
         src="https://img.shields.io/badge/Docker%20logs-NLRC-lightblue?style=flat-square&logo=docker&logoColor=white"
     /></a>
 
-    <br />
-    <br />
+    <p class="status">
+      <a
+        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-NLRC/appServices"
+        ><img
+          alt="Azure App Service [NLRC]"
+          src="https://img.shields.io/website?url=https://nlrc.121.global/docs/&style=flat-square&label=121-service+[NLRC]"
+      /></a>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-NLRC/appServices"
-      ><img
-        alt="Azure App Service [NLRC]"
-        src="https://img.shields.io/website?url=https://nlrc.121.global/docs/&style=flat-square&label=121-service+[NLRC]"
-    /></a>
+      <a
+        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_all.yml"
+        ><img
+          alt="Status: Deploy [NLRC] All"
+          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_all.yml/badge.svg"
+      /></a>
+    </p>
+    <p class="versions">
+      <a href="https://nlrc.121.global/docs/"
+        ><img
+          alt="Service: 121-service [NLRC]"
+          src="https://img.shields.io/badge/endpoint?url=https://nlrc.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
+      /></a>
 
-    <a
-      href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_all.yml"
-      ><img
-        alt="Status: Deploy [NLRC] All"
-        src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_all.yml/badge.svg"
-    /></a>
+      <br />
 
-    <br />
+      <a href="https://portal.nlrc.121.global/"
+        ><img
+          alt="Interface: Portal [NLRC]"
+          src="https://img.shields.io/badge/endpoint?url=https://portal.nlrc.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
+      /></a>
 
-    <a href="https://nlrc.121.global/docs/"
-      ><img
-        alt="Service: 121-service [NLRC]"
-        src="https://img.shields.io/badge/endpoint?url=https://nlrc.121.global/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[NLRC]"
-    /></a>
+      <br />
 
-    <br />
-
-    <a href="https://portal.nlrc.121.global/"
-      ><img
-        alt="Interface: Portal [NLRC]"
-        src="https://img.shields.io/badge/endpoint?url=https://portal.nlrc.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[NLRC]"
-    /></a>
-
-    <br />
-
-    <a href="https://register.nlrc.121.global/"
-      ><img
-        alt="Interface: Register App [NLRC]"
-        src="https://img.shields.io/badge/endpoint?url=https://register.nlrc.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App+[NLRC]"
-    /></a>
+      <a href="https://register.nlrc.121.global/"
+        ><img
+          alt="Interface: Register App [NLRC]"
+          src="https://img.shields.io/badge/endpoint?url=https://register.nlrc.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App"
+      /></a>
+    </p>
   </section>
 
-  <section id="jrethiopia">
+  <section
+    id="jrethiopia"
+    class="instance"
+  >
     <h2>
       Joint Response Ethiopia
       <img
@@ -501,49 +529,51 @@
         src="https://img.shields.io/badge/Docker%20logs-jrethiopia-lightblue?style=flat-square&logo=docker&logoColor=white"
     /></a>
 
-    <br />
-    <br />
+    <p class="status">
+      <a
+        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-dorcas-ethiopia/appServices"
+        ><img
+          alt="Azure App Service [jrethiopia]"
+          src="https://img.shields.io/website?url=https://jrethiopia.121.global/docs/&style=flat-square&label=121-service+[jrethiopia]"
+      /></a>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-dorcas-ethiopia/appServices"
-      ><img
-        alt="Azure App Service [jrethiopia]"
-        src="https://img.shields.io/website?url=https://jrethiopia.121.global/docs/&style=flat-square&label=121-service+[jrethiopia]"
-    /></a>
+      <a
+        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-jrethiopia_all.yml"
+        ><img
+          alt="Status: Deploy [jrethiopia] All"
+          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-jrethiopia_all.yml/badge.svg"
+      /></a>
+    </p>
 
-    <a
-      href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-jrethiopia_all.yml"
-      ><img
-        alt="Status: Deploy [jrethiopia] All"
-        src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-jrethiopia_all.yml/badge.svg"
-    /></a>
+    <p class="versions">
+      <a href="https://jrethiopia.121.global/docs/"
+        ><img
+          alt="Service: 121-service [jrethiopia]"
+          src="https://img.shields.io/badge/endpoint?url=https://jrethiopia.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
+      /></a>
 
-    <br />
+      <br />
 
-    <a href="https://jrethiopia.121.global/docs/"
-      ><img
-        alt="Service: 121-service [jrethiopia]"
-        src="https://img.shields.io/badge/endpoint?url=https://jrethiopia.121.global/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[jrethiopia]"
-    /></a>
+      <a href="https://portal.jrethiopia.121.global/"
+        ><img
+          alt="Interface: Portal [jrethiopia]"
+          src="https://img.shields.io/badge/endpoint?url=https://portal.jrethiopia.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
+      /></a>
 
-    <br />
+      <br />
 
-    <a href="https://portal.jrethiopia.121.global/"
-      ><img
-        alt="Interface: Portal [jrethiopia]"
-        src="https://img.shields.io/badge/endpoint?url=https://portal.jrethiopia.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[jrethiopia]"
-    /></a>
-
-    <br />
-
-    <a href="https://register.jrethiopia.121.global/"
-      ><img
-        alt="Interface: Register App [jrethiopia]"
-        src="https://img.shields.io/badge/endpoint?url=https://register.jrethiopia.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App+[jrethiopia]"
-    /></a>
+      <a href="https://register.jrethiopia.121.global/"
+        ><img
+          alt="Interface: Register App [jrethiopia]"
+          src="https://img.shields.io/badge/endpoint?url=https://register.jrethiopia.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App"
+      /></a>
+    </p>
   </section>
 
-  <section id="kenya">
+  <section
+    id="kenya"
+    class="instance"
+  >
     <h2>
       Kenya
       <img
@@ -566,49 +596,50 @@
         src="https://img.shields.io/badge/Docker%20logs-Kenya-lightblue?style=flat-square&logo=docker&logoColor=white"
     /></a>
 
-    <br />
-    <br />
+    <p class="status">
+      <a
+        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-krcs/appServices"
+        ><img
+          alt="Azure App Service [Kenya]"
+          src="https://img.shields.io/website?url=https://krcs.121.global/docs/&style=flat-square&label=121-service+[Kenya]"
+      /></a>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-krcs/appServices"
-      ><img
-        alt="Azure App Service [Kenya]"
-        src="https://img.shields.io/website?url=https://krcs.121.global/docs/&style=flat-square&label=121-service+[Kenya]"
-    /></a>
+      <a
+        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-krcs_all.yml"
+        ><img
+          alt="Status: Deploy [Kenya] All"
+          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-krcs_all.yml/badge.svg"
+      /></a>
+    </p>
+    <p class="versions">
+      <a href="https://krcs.121.global/docs/"
+        ><img
+          alt="Service: 121-service [Kenya]"
+          src="https://img.shields.io/badge/endpoint?url=https://krcs.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
+      /></a>
 
-    <a
-      href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-krcs_all.yml"
-      ><img
-        alt="Status: Deploy [Kenya] All"
-        src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-krcs_all.yml/badge.svg"
-    /></a>
+      <br />
 
-    <br />
+      <a href="https://portal.krcs.121.global/"
+        ><img
+          alt="Interface: Portal [Kenya]"
+          src="https://img.shields.io/badge/endpoint?url=https://portal.krcs.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
+      /></a>
 
-    <a href="https://krcs.121.global/docs/"
-      ><img
-        alt="Service: 121-service [Kenya]"
-        src="https://img.shields.io/badge/endpoint?url=https://krcs.121.global/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[Kenya]"
-    /></a>
+      <br />
 
-    <br />
-
-    <a href="https://portal.krcs.121.global/"
-      ><img
-        alt="Interface: Portal [Kenya]"
-        src="https://img.shields.io/badge/endpoint?url=https://portal.krcs.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[Kenya]"
-    /></a>
-
-    <br />
-
-    <a href="https://register.krcs.121.global/"
-      ><img
-        alt="Interface: Register App [Kenya]"
-        src="https://img.shields.io/badge/endpoint?url=https://register.krcs.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App+[Kenya]"
-    /></a>
+      <a href="https://register.krcs.121.global/"
+        ><img
+          alt="Interface: Register App [Kenya]"
+          src="https://img.shields.io/badge/endpoint?url=https://register.krcs.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Register+App"
+      /></a>
+    </p>
   </section>
 
-  <section id="rwanda">
+  <section
+    id="rwanda"
+    class="instance"
+  >
     <h2>
       Rwanda
       <img
@@ -630,42 +661,42 @@
         alt="Docker logs: Rwanda"
         src="https://img.shields.io/badge/Docker%20logs-Rwanda-lightblue?style=flat-square&logo=docker&logoColor=white"
     /></a>
+    <p class="status">
+      <a
+        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-rwanda/appServices"
+        ><img
+          alt="Azure App Service [Rwanda]"
+          src="https://img.shields.io/website?url=https://rwanda.121.global/docs/&style=flat-square&label=121-service+[Rwanda]"
+      /></a>
 
-    <br />
-    <br />
+      <a
+        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-rwanda_all.yml"
+        ><img
+          alt="Status: Deploy [Rwanda] All"
+          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-rwanda_all.yml/badge.svg"
+      /></a>
+    </p>
+    <p class="versions">
+      <a href="https://rwanda.121.global/docs/"
+        ><img
+          alt="Service: 121-service [Rwanda]"
+          src="https://img.shields.io/badge/endpoint?url=https://rwanda.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
+      /></a>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-rwanda/appServices"
-      ><img
-        alt="Azure App Service [Rwanda]"
-        src="https://img.shields.io/website?url=https://rwanda.121.global/docs/&style=flat-square&label=121-service+[Rwanda]"
-    /></a>
+      <br />
 
-    <a
-      href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-rwanda_all.yml"
-      ><img
-        alt="Status: Deploy [Rwanda] All"
-        src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-rwanda_all.yml/badge.svg"
-    /></a>
-
-    <br />
-
-    <a href="https://rwanda.121.global/docs/"
-      ><img
-        alt="Service: 121-service [Rwanda]"
-        src="https://img.shields.io/badge/endpoint?url=https://rwanda.121.global/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[Rwanda]"
-    /></a>
-
-    <br />
-
-    <a href="https://portal.rwanda.121.global/"
-      ><img
-        alt="Interface: Portal [Rwanda]"
-        src="https://img.shields.io/badge/endpoint?url=https://portal.rwanda.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[Rwanda]"
-    /></a>
+      <a href="https://portal.rwanda.121.global/"
+        ><img
+          alt="Interface: Portal [Rwanda]"
+          src="https://img.shields.io/badge/endpoint?url=https://portal.rwanda.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
+      /></a>
+    </p>
   </section>
 
-  <section id="greece">
+  <section
+    id="greece"
+    class="instance"
+  >
     <h2>
       Greece
       <img
@@ -688,38 +719,37 @@
         src="https://img.shields.io/badge/Docker%20logs-Greece-lightblue?style=flat-square&logo=docker&logoColor=white"
     /></a>
 
-    <br />
-    <br />
+    <p class="status">
+      <a
+        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-greece/appServices"
+        ><img
+          alt="Azure App Service [Greece]"
+          src="https://img.shields.io/website?url=https://greece.121.global/docs/&style=flat-square&label=121-service+[Greece]"
+      /></a>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-greece/appServices"
-      ><img
-        alt="Azure App Service [Greece]"
-        src="https://img.shields.io/website?url=https://greece.121.global/docs/&style=flat-square&label=121-service+[Greece]"
-    /></a>
+      <a
+        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-greece_all.yml"
+        ><img
+          alt="Status: Deploy [Greece] All"
+          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-greece_all.yml/badge.svg"
+      /></a>
+    </p>
 
-    <a
-      href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-greece_all.yml"
-      ><img
-        alt="Status: Deploy [Greece] All"
-        src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-greece_all.yml/badge.svg"
-    /></a>
+    <p class="versions">
+      <a href="https://greece.121.global/docs/"
+        ><img
+          alt="Service: 121-service [Greece]"
+          src="https://img.shields.io/badge/endpoint?url=https://greece.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
+      /></a>
 
-    <br />
+      <br />
 
-    <a href="https://greece.121.global/docs/"
-      ><img
-        alt="Service: 121-service [Greece]"
-        src="https://img.shields.io/badge/endpoint?url=https://greece.121.global/api/health/version&style=flat-square&logo=microsoft-azure&logoColor=white&label=121-service+[Greece]"
-    /></a>
-
-    <br />
-
-    <a href="https://portal.greece.121.global/"
-      ><img
-        alt="Interface: Portal [Greece]"
-        src="https://img.shields.io/badge/endpoint?url=https://portal.greece.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[Greece]"
-    /></a>
+      <a href="https://portal.greece.121.global/"
+        ><img
+          alt="Interface: Portal [Greece]"
+          src="https://img.shields.io/badge/endpoint?url=https://portal.greece.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
+      /></a>
+    </p>
   </section>
 
   <footer>
