@@ -4,13 +4,5 @@
   "homepage": "https://status.121.global/",
   "license": "Apache-2.0",
   "repository": "github:global-121/status",
-  "private": true,
-  "prettier": {
-    "arrowParens": "always",
-    "editorconfig": true,
-    "semi": true,
-    "singleQuote": true,
-    "trailingComma": "all",
-    "singleAttributePerLine": true
-  }
+  "private": true
 }
