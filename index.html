@@ -72,16 +72,30 @@
       padding: 1rem 2rem;
       border-top: 1px dashed silver;
     }
+
+    section#deployment {
+      border-bottom: 1px dashed silver;
+      margin-bottom: 2rem;
+    }
+    footer {
+      margin-top: 2rem;
+    }
+
     .instance .versions,
     .instance .status,
     .instance {
       display: inline-block;
       vertical-align: top;
       width: 45%;
-      min-width: 10em;
     }
     .instance {
-      min-width: 20rem;
+      width: auto;
+      min-width: 24em;
+      padding: 0 1rem;
+      border: 0 solid;
+      box-shadow: 0 0 0.33em rgba(0, 0, 0, 0.2);
+      border-radius: 0.5em;
+      margin: 1rem;
     }
     .instance .status {
       text-align: start;
@@ -238,13 +252,6 @@
         src="https://img.shields.io/badge/Docker%20logs-Test-lightblue?style=flat-square&logo=docker&logoColor=white"
     /></a>
 
-    <a
-      href="https://github.com/global-121/121-platform/actions/workflows/deploy_test_all.yml"
-      ><img
-        alt="Status: Deploy [test] All"
-        src="https://github.com/global-121/121-platform/actions/workflows/deploy_test_all.yml/badge.svg"
-    /></a>
-
     <br />
 
     <a href="https://test.121.global/docs/"
@@ -318,34 +325,29 @@
   >
     <h2>Staging 🎭</h2>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510global/providers/microsoft.portal/dashboards/e541ee28-3c55-4daf-9740-fcc5cc429287"
-      ><img
-        alt="Azure Dashboard: Staging"
-        src="https://img.shields.io/badge/Azure%20Dashboard-Staging-silver?style=flat-square&logo=microsoft-azure&logoColor=white"
-    /></a>
-
-    <a href="https://121-test-staging.scm.azurewebsites.net/api/logs/docker"
-      ><img
-        alt="Docker logs: Staging"
-        src="https://img.shields.io/badge/Docker%20logs-Staging-lightblue?style=flat-square&logo=docker&logoColor=white"
-    /></a>
-
-    <br />
-    <br />
-
     <p class="status">
       <a
         href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-test/slots/staging/appServices"
         ><img
           alt="Azure App Service [staging]"
-          src="https://img.shields.io/website?url=https://staging.121.global/docs/&labelColor=blueviolet&style=flat-square&label=121-service+[staging]"
+          src="https://img.shields.io/website?url=https://staging.121.global/docs/&style=flat-square&label=121-service+[staging]"
       /></a>
+
+      <br />
+
       <a
-        href="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_all.yml"
+        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510global/providers/microsoft.portal/dashboards/e541ee28-3c55-4daf-9740-fcc5cc429287"
         ><img
-          alt="Status: Deploy [staging] All"
-          src="https://github.com/global-121/121-platform/actions/workflows/deploy_staging_all.yml/badge.svg"
+          alt="Azure Dashboard: Staging"
+          src="https://img.shields.io/badge/Azure%20Dashboard-Staging-silver?style=flat-square&logo=microsoft-azure&logoColor=white"
+      /></a>
+
+      <br />
+
+      <a href="https://121-test-staging.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Docker logs: Staging"
+          src="https://img.shields.io/badge/Docker%20logs-Staging-lightblue?style=flat-square&logo=docker&logoColor=white"
       /></a>
     </p>
 
@@ -395,22 +397,6 @@
       />
     </h2>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/7e6e8da5-0c95-4b39-b4be-3c1b1f9c3756-dashboard"
-      ><img
-        alt="Azure Dashboard: Demo"
-        src="https://img.shields.io/badge/Azure%20Dashboard-Demo-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
-    /></a>
-
-    <a href="https://121-demo.scm.azurewebsites.net/api/logs/docker"
-      ><img
-        alt="Docker logs: Demo"
-        src="https://img.shields.io/badge/Docker%20logs-Demo-lightblue?style=flat-square&logo=docker&logoColor=white"
-    /></a>
-
-    <br />
-    <br />
-
     <p class="status">
       <a
         href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-demo/appServices"
@@ -419,11 +405,21 @@
           src="https://img.shields.io/website?url=https://demo.121.global/docs/&style=flat-square&label=121-service+[Demo]"
       /></a>
 
+      <br />
+
       <a
-        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-demo_all.yml"
+        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/7e6e8da5-0c95-4b39-b4be-3c1b1f9c3756-dashboard"
         ><img
-          alt="Status: Deploy [Demo] All"
-          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-demo_all.yml/badge.svg"
+          alt="Azure Dashboard: Demo"
+          src="https://img.shields.io/badge/Azure%20Dashboard-Demo-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
+      /></a>
+
+      <br />
+
+      <a href="https://121-demo.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Docker logs: Demo"
+          src="https://img.shields.io/badge/Docker%20logs-Demo-lightblue?style=flat-square&logo=docker&logoColor=white"
       /></a>
     </p>
 
@@ -473,22 +469,6 @@
       />
     </h2>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510global/providers/microsoft.portal/dashboards/6d159546-263f-4a37-aa40-e89dc04cd1c5"
-      ><img
-        alt="Azure Dashboard: NLRC"
-        src="https://img.shields.io/badge/Azure%20Dashboard-NLRC-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
-    /></a>
-
-    <a href="https://121-nlrc.scm.azurewebsites.net/api/logs/docker"
-      ><img
-        alt="Docker logs: NLRC"
-        src="https://img.shields.io/badge/Docker%20logs-NLRC-lightblue?style=flat-square&logo=docker&logoColor=white"
-    /></a>
-
-    <br />
-    <br />
-
     <p class="status">
       <a
         href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-NLRC/appServices"
@@ -497,11 +477,21 @@
           src="https://img.shields.io/website?url=https://nlrc.121.global/docs/&style=flat-square&label=121-service+[NLRC]"
       /></a>
 
+      <br />
+
       <a
-        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_all.yml"
+        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510global/providers/microsoft.portal/dashboards/6d159546-263f-4a37-aa40-e89dc04cd1c5"
         ><img
-          alt="Status: Deploy [NLRC] All"
-          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-nlrc_all.yml/badge.svg"
+          alt="Azure Dashboard: NLRC"
+          src="https://img.shields.io/badge/Azure%20Dashboard-NLRC-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
+      /></a>
+
+      <br />
+
+      <a href="https://121-nlrc.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Docker logs: NLRC"
+          src="https://img.shields.io/badge/Docker%20logs-NLRC-lightblue?style=flat-square&logo=docker&logoColor=white"
       /></a>
     </p>
     <p class="versions">
@@ -542,22 +532,6 @@
       />
     </h2>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/e8140701-4a45-40bd-b414-2f2933ae4400-dashboard"
-      ><img
-        alt="Azure Dashboard: jrethiopia"
-        src="https://img.shields.io/badge/Azure%20Dashboard-jrethiopia-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
-    /></a>
-
-    <a href="https://121-dorcas-ethiopia.scm.azurewebsites.net/api/logs/docker"
-      ><img
-        alt="Docker logs: jrethiopia"
-        src="https://img.shields.io/badge/Docker%20logs-jrethiopia-lightblue?style=flat-square&logo=docker&logoColor=white"
-    /></a>
-
-    <br />
-    <br />
-
     <p class="status">
       <a
         href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-dorcas-ethiopia/appServices"
@@ -566,11 +540,22 @@
           src="https://img.shields.io/website?url=https://jrethiopia.121.global/docs/&style=flat-square&label=121-service+[jrethiopia]"
       /></a>
 
+      <br />
+
       <a
-        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-jrethiopia_all.yml"
+        href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/e8140701-4a45-40bd-b414-2f2933ae4400-dashboard"
         ><img
-          alt="Status: Deploy [jrethiopia] All"
-          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-jrethiopia_all.yml/badge.svg"
+          alt="Azure Dashboard: jrethiopia"
+          src="https://img.shields.io/badge/Azure%20Dashboard-jrethiopia-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
+      /></a>
+
+      <br />
+
+      <a
+        href="https://121-dorcas-ethiopia.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Docker logs: jrethiopia"
+          src="https://img.shields.io/badge/Docker%20logs-jrethiopia-lightblue?style=flat-square&logo=docker&logoColor=white"
       /></a>
     </p>
 
@@ -612,22 +597,6 @@
       />
     </h2>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/ccc3b455-2e1c-48d7-9d98-dc7d45e3997e-dashboard"
-      ><img
-        alt="Azure Dashboard: Kenya"
-        src="https://img.shields.io/badge/Azure%20Dashboard-Kenya-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
-    /></a>
-
-    <a href="https://121-krcs.scm.azurewebsites.net/api/logs/docker"
-      ><img
-        alt="Docker logs: Kenya"
-        src="https://img.shields.io/badge/Docker%20logs-Kenya-lightblue?style=flat-square&logo=docker&logoColor=white"
-    /></a>
-
-    <br />
-    <br />
-
     <p class="status">
       <a
         href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-krcs/appServices"
@@ -636,13 +605,24 @@
           src="https://img.shields.io/website?url=https://krcs.121.global/docs/&style=flat-square&label=121-service+[Kenya]"
       /></a>
 
+      <br />
+
       <a
-        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-krcs_all.yml"
+        href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/ccc3b455-2e1c-48d7-9d98-dc7d45e3997e-dashboard"
         ><img
-          alt="Status: Deploy [Kenya] All"
-          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-krcs_all.yml/badge.svg"
+          alt="Azure Dashboard: Kenya"
+          src="https://img.shields.io/badge/Azure%20Dashboard-Kenya-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
+      /></a>
+
+      <br />
+
+      <a href="https://121-krcs.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Docker logs: Kenya"
+          src="https://img.shields.io/badge/Docker%20logs-Kenya-lightblue?style=flat-square&logo=docker&logoColor=white"
       /></a>
     </p>
+
     <p class="versions">
       <a href="https://krcs.121.global/docs/"
         ><img
@@ -681,22 +661,6 @@
       />
     </h2>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/02cc777b-1e59-47db-80bc-ef9dfb23cb57-dashboard"
-      ><img
-        alt="Azure Dashboard: Rwanda"
-        src="https://img.shields.io/badge/Azure%20Dashboard-Rwanda-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
-    /></a>
-
-    <a href="https://121-rwanda.scm.azurewebsites.net/api/logs/docker"
-      ><img
-        alt="Docker logs: Rwanda"
-        src="https://img.shields.io/badge/Docker%20logs-Rwanda-lightblue?style=flat-square&logo=docker&logoColor=white"
-    /></a>
-
-    <br />
-    <br />
-
     <p class="status">
       <a
         href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-rwanda/appServices"
@@ -705,13 +669,24 @@
           src="https://img.shields.io/website?url=https://rwanda.121.global/docs/&style=flat-square&label=121-service+[Rwanda]"
       /></a>
 
+      <br />
+
       <a
-        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-rwanda_all.yml"
+        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/02cc777b-1e59-47db-80bc-ef9dfb23cb57-dashboard"
         ><img
-          alt="Status: Deploy [Rwanda] All"
-          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-rwanda_all.yml/badge.svg"
+          alt="Azure Dashboard: Rwanda"
+          src="https://img.shields.io/badge/Azure%20Dashboard-Rwanda-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
+      /></a>
+
+      <br />
+
+      <a href="https://121-rwanda.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Docker logs: Rwanda"
+          src="https://img.shields.io/badge/Docker%20logs-Rwanda-lightblue?style=flat-square&logo=docker&logoColor=white"
       /></a>
     </p>
+
     <p class="versions">
       <a href="https://rwanda.121.global/docs/"
         ><img
@@ -742,22 +717,6 @@
       />
     </h2>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/06269efb-47da-4b1c-8dd5-f4bb3685457f-dashboard"
-      ><img
-        alt="Azure Dashboard: Greece"
-        src="https://img.shields.io/badge/Azure%20Dashboard-Greece-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
-    /></a>
-
-    <a href="https://121-greece.scm.azurewebsites.net/api/logs/docker"
-      ><img
-        alt="Docker logs: Greece"
-        src="https://img.shields.io/badge/Docker%20logs-Greece-lightblue?style=flat-square&logo=docker&logoColor=white"
-    /></a>
-
-    <br />
-    <br />
-
     <p class="status">
       <a
         href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-greece/appServices"
@@ -766,11 +725,21 @@
           src="https://img.shields.io/website?url=https://greece.121.global/docs/&style=flat-square&label=121-service+[Greece]"
       /></a>
 
+      <br />
+
       <a
-        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-greece_all.yml"
+        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/06269efb-47da-4b1c-8dd5-f4bb3685457f-dashboard"
         ><img
-          alt="Status: Deploy [Greece] All"
-          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-greece_all.yml/badge.svg"
+          alt="Azure Dashboard: Greece"
+          src="https://img.shields.io/badge/Azure%20Dashboard-Greece-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
+      /></a>
+
+      <br />
+
+      <a href="https://121-greece.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Docker logs: Greece"
+          src="https://img.shields.io/badge/Docker%20logs-Greece-lightblue?style=flat-square&logo=docker&logoColor=white"
       /></a>
     </p>
 
@@ -804,22 +773,6 @@
       />
     </h2>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/e46621c5-b68f-44df-9aa0-c3acfe8fc3e4"
-      ><img
-        alt="Azure Dashboard: South Africa"
-        src="https://img.shields.io/badge/Azure%20Dashboard-South Africa-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
-    /></a>
-
-    <a href="https://121-southafrica.scm.azurewebsites.net/api/logs/docker"
-      ><img
-        alt="Docker logs: South Africa"
-        src="https://img.shields.io/badge/Docker%20logs-South Africa-lightblue?style=flat-square&logo=docker&logoColor=white"
-    /></a>
-
-    <br />
-    <br />
-
     <p class="status">
       <a
         href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-southafrica/appServices"
@@ -828,11 +781,21 @@
           src="https://img.shields.io/website?url=https://southafrica.121.global/docs/&style=flat-square&label=121-service+[South Africa]"
       /></a>
 
+      <br />
+
       <a
-        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-southafrica_all.yml"
+        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/e46621c5-b68f-44df-9aa0-c3acfe8fc3e4"
         ><img
-          alt="Status: Deploy [South Africa] All"
-          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-southafrica_all.yml/badge.svg"
+          alt="Azure Dashboard: South Africa"
+          src="https://img.shields.io/badge/Azure%20Dashboard-South Africa-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
+      /></a>
+
+      <br />
+
+      <a href="https://121-southafrica.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Docker logs: South Africa"
+          src="https://img.shields.io/badge/Docker%20logs-South Africa-lightblue?style=flat-square&logo=docker&logoColor=white"
       /></a>
     </p>
 
@@ -866,22 +829,6 @@
       />
     </h2>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/e46621c5-b68f-44df-9aa0-c3acfe8fc3e4"
-      ><img
-        alt="Azure Dashboard: Help a child"
-        src="https://img.shields.io/badge/Azure%20Dashboard-Help a Child-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
-    /></a>
-
-    <a href="https://121-helpachild.scm.azurewebsites.net/api/logs/docker"
-      ><img
-        alt="Docker logs: Help a child"
-        src="https://img.shields.io/badge/Docker%20logs-Help a Child-lightblue?style=flat-square&logo=docker&logoColor=white"
-    /></a>
-
-    <br />
-    <br />
-
     <p class="status">
       <a
         href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-helpachild/appServices"
@@ -890,11 +837,21 @@
           src="https://img.shields.io/website?url=https://helpachild.121.global/docs/&style=flat-square&label=121-service+[Help a child]"
       /></a>
 
+      <br />
+
       <a
-        href="https://github.com/global-121/121-platform/actions/workflows/deploy_client-helpachild_all.yml"
+        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/e46621c5-b68f-44df-9aa0-c3acfe8fc3e4"
         ><img
-          alt="Status: Deploy [Help a Child] All"
-          src="https://github.com/global-121/121-platform/actions/workflows/deploy_client-helpachild_all.yml/badge.svg"
+          alt="Azure Dashboard: Help a child"
+          src="https://img.shields.io/badge/Azure%20Dashboard-Help a Child-lightblue?style=flat-square&logo=microsoft-azure&logoColor=white"
+      /></a>
+
+      <br />
+
+      <a href="https://121-helpachild.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Docker logs: Help a child"
+          src="https://img.shields.io/badge/Docker%20logs-Help a Child-lightblue?style=flat-square&logo=docker&logoColor=white"
       /></a>
     </p>
 
