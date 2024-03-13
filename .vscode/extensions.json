@@ -3,6 +3,7 @@
     "ms-vscode.live-server",
     "editorconfig.editorconfig",
     "anteprimorac.html-end-tag-labels",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "redhat.vscode-yaml"
   ]
 }
