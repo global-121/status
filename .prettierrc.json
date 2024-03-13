@@ -1,8 +1,0 @@
-{
-  "arrowParens": "always",
-  "editorconfig": true,
-  "semi": true,
-  "singleQuote": true,
-  "trailingComma": "all",
-  "singleAttributePerLine": true
-}
