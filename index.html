@@ -63,14 +63,15 @@
       vertical-align: middle;
     }
 
-    h2:first-of-type {
-      margin-block-start: 0;
-    }
-
     hr {
       border: 0;
       border-top: 1px dashed silver;
       margin: 1rem 0;
+    }
+
+    abbr[title] {
+      text-decoration: none;
+      cursor: help;
     }
 
     footer,
@@ -82,23 +83,33 @@
       margin-top: 2rem;
     }
 
-    .instance .versions,
-    .instance .status,
     .instance {
-      display: inline-block;
-      vertical-align: top;
-      width: 45%;
-    }
-    .instance {
-      width: auto;
-      min-width: 24em;
+      display: inline-flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+      width: 25%;
+      min-width: 20em;
       padding: 0 1rem;
       border: 0 solid;
       box-shadow: 0 0 0.33em rgba(0, 0, 0, 0.2);
       border-radius: 0.5em;
       margin: 1rem;
     }
-    .instance .status {
+    .instance.is-narrow {
+      min-width: 16em;
+      width: min-content;
+    }
+    .instance.is-wide {
+      width: 30%;
+      min-width: 30em;
+    }
+
+    .instance h2 {
+      width: 100%;
+      margin-block-start: 0;
+    }
+    .instance .status,
+    .instance p {
       text-align: start;
     }
     .instance .versions {
@@ -176,56 +187,47 @@
 
   <hr />
 
-  <section id="test">
+  <section
+    id="test"
+    class="instance is-wide"
+  >
     <h2>Test 🚨</h2>
 
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-test/appServices"
-      ><img
-        alt="Azure App Service [test]"
-        src="https://img.shields.io/website?url=https://test.121.global/docs/&labelColor=hotpink&style=flat-square&label=121-service+[test]"
-    /></a>
+    <p class="status">
+      <a
+        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-test/appServices"
+        ><img
+          alt="Azure App Service [test]"
+          src="https://img.shields.io/website?url=https://test.121.global/docs/&labelColor=hotpink&style=flat-square&label=121-service+[test]"
+      /></a>
 
-    <a href="https://121-test.scm.azurewebsites.net/api/logs/docker"
-      ><img
-        alt="Logs: Test"
-        src="https://img.shields.io/badge/Logs-Test-lightblue?style=flat-square&logo=docker&logoColor=white"
-    /></a>
+      <br />
+      <a href="https://121-test.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Logs: Test"
+          src="https://img.shields.io/badge/Logs-Test-lightblue?style=flat-square&logo=docker&logoColor=white"
+      /></a>
+    </p>
 
-    <br />
+    <p class="versions">
+      <a href="https://test.121.global/docs/"
+        ><img
+          alt="Service: 121-service [test]"
+          src="https://img.shields.io/badge/endpoint?url=https://test.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service+[test]"
+      /></a>
+      <br />
 
-    <a href="https://test.121.global/docs/"
-      ><img
-        alt="Service: 121-service [test]"
-        src="https://img.shields.io/badge/endpoint?url=https://test.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service+[test]"
-    /></a>
-    <a
-      href="https://github.com/global-121/121-platform/actions/workflows/deploy_test_service.yml"
-      ><img
-        alt="Status: Deploy [test] 121-service"
-        src="https://github.com/global-121/121-platform/actions/workflows/deploy_test_service.yml/badge.svg"
-    /></a>
-
-    <br />
-
-    <a href="https://portal.test.121.global/"
-      ><img
-        alt="Interface: Portal [test]"
-        src="https://img.shields.io/badge/endpoint?url=https://portal.test.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[test]"
-    /></a>
-    <a
-      href="https://github.com/global-121/121-platform/actions/workflows/deploy_test_portal.yml"
-      ><img
-        alt="Status: Deploy [test] Portal"
-        src="https://github.com/global-121/121-platform/actions/workflows/deploy_test_portal.yml/badge.svg"
-    /></a>
+      <a href="https://portal.test.121.global/"
+        ><img
+          alt="Interface: Portal [test]"
+          src="https://img.shields.io/badge/endpoint?url=https://portal.test.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[test]"
+      /></a>
+    </p>
   </section>
-
-  <hr />
 
   <section
     id="staging"
-    class="instance"
+    class="instance is-wide"
   >
     <h2>Staging 🎭</h2>
 
@@ -235,15 +237,6 @@
         ><img
           alt="Azure App Service [staging]"
           src="https://img.shields.io/website?url=https://staging.121.global/docs/&style=flat-square&label=121-service+[staging]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/5545bd61-9384-42cb-8c0f-e21edc387f92-dashboard"
-        ><img
-          alt="Dashboard: Staging"
-          src="https://img.shields.io/badge/Dashboard-Staging-silver?style=flat-square&logo=microsoft-azure&logoColor=white"
       /></a>
 
       <br />
@@ -272,9 +265,11 @@
     </p>
   </section>
 
+  <hr />
+
   <section
     id="demo"
-    class="instance"
+    class="instance is-wide"
   >
     <h2>
       Demo
@@ -330,11 +325,9 @@
 
   <section
     id="training"
-    class="instance"
+    class="instance is-wide"
   >
-    <h2>
-      Training 🎓
-    </h2>
+    <h2>Training 🎓</h2>
 
     <p class="status">
       <a
@@ -825,6 +818,101 @@
         ><img
           alt="Interface: Portal [jrethiopia]"
           src="https://img.shields.io/badge/endpoint?url=https://portal.jrethiopia.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
+      /></a>
+    </p>
+  </section>
+
+  <hr />
+
+  <section
+    id="mock-test"
+    class="instance is-narrow"
+  >
+    <h2>Mock-Service <abbr title="Test">🔴</abbr></h2>
+
+    <p>
+      <a
+        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-mock-test/appServices"
+        ><img
+          alt="Mock-Service [Test]"
+          src="https://img.shields.io/website?url=https://121-mock-test.azurewebsites.net/docs/&style=flat-square&label=Mock-Service+[test]"
+      /></a>
+      <br />
+
+      <a href="https://121-mock-test.azurewebsites.net/docs/"
+        ><img
+          alt="Service: Mock-Service [Test]"
+          src="https://img.shields.io/badge/endpoint?url=https://121-mock-test.azurewebsites.net/api/health/version&style=flat-square&logoColor=white&label=Mock-Service"
+      /></a>
+
+      <br />
+
+      <a href="https://121-mock-test.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Logs: Test"
+          src="https://img.shields.io/badge/Logs-Test-lightblue?style=flat-square&logo=docker&logoColor=white"
+      /></a>
+    </p>
+  </section>
+
+  <section
+    id="mock-staging"
+    class="instance is-narrow"
+  >
+    <h2>Mock-Service <abbr title="Staging">🟡</abbr></h2>
+
+    <p>
+      <a
+        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-mock-staging/appServices"
+        ><img
+          alt="Mock-Service [Staging]"
+          src="https://img.shields.io/website?url=https://121-mock-staging.azurewebsites.net/docs/&style=flat-square&label=Mock-Service+[staging]"
+      /></a>
+      <br />
+
+      <a href="https://121-mock-staging.azurewebsites.net/docs/"
+        ><img
+          alt="Service: Mock-Service [Staging]"
+          src="https://img.shields.io/badge/endpoint?url=https://121-mock-staging.azurewebsites.net/api/health/version&style=flat-square&logoColor=white&label=Mock-Service"
+      /></a>
+
+      <br />
+
+      <a href="https://121-mock-staging.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Logs: Staging"
+          src="https://img.shields.io/badge/Logs-Staging-lightblue?style=flat-square&logo=docker&logoColor=white"
+      /></a>
+    </p>
+  </section>
+
+  <section
+    id="mock-production"
+    class="instance is-narrow"
+  >
+    <h2>Mock-Service <abbr title="production">🟠</abbr></h2>
+
+    <p>
+      <a
+        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-mock/appServices"
+        ><img
+          alt="Mock-Service [Production]"
+          src="https://img.shields.io/website?url=https://121-mock.azurewebsites.net/docs/&style=flat-square&label=Mock-Service+[production]"
+      /></a>
+      <br />
+
+      <a href="https://121-mock.azurewebsites.net/docs/"
+        ><img
+          alt="Service: Mock-Service [Production]"
+          src="https://img.shields.io/badge/endpoint?url=https://121-mock.azurewebsites.net/api/health/version&style=flat-square&logoColor=white&label=Mock-Service"
+      /></a>
+
+      <br />
+
+      <a href="https://121-mock.scm.azurewebsites.net/api/logs/docker"
+        ><img
+          alt="Logs: Production"
+          src="https://img.shields.io/badge/Logs-Production-lightblue?style=flat-square&logo=docker&logoColor=white"
       /></a>
     </p>
   </section>
