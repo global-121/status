@@ -27,100 +27,7 @@
     rel="icon"
     href="121-logo.190.png"
   />
-
-  <style>
-
-    :root {
-      accent-color: #e9a6a5;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font: 100% / 1.5 monospace, monospace;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #444;
-      text-align: center;
-    }
-
-    a {
-      color: #e9a6a5;
-      font-weight: bold;
-      display: inline-block;
-    }
-
-    h1 {
-      text-align: center;
-      margin: 1em 0;
-    }
-    h1 a {
-      display: inline-block;
-      color: currentColor;
-      text-decoration: none;
-    }
-    h1 img {
-      vertical-align: middle;
-    }
-
-    hr {
-      border: 0;
-      border-top: 1px dashed silver;
-      margin: 1rem 0;
-    }
-
-    abbr[title] {
-      text-decoration: none;
-      cursor: help;
-    }
-
-    footer,
-    section {
-      padding: 1rem 2rem;
-    }
-
-    footer {
-      margin-top: 2rem;
-    }
-
-    .instance {
-      display: inline-flex;
-      flex-flow: row wrap;
-      justify-content: space-around;
-      width: 25%;
-      min-width: 20em;
-      padding: 0 1rem;
-      border: 0 solid;
-      box-shadow: 0 0 0.33em rgba(0, 0, 0, 0.2);
-      border-radius: 0.5em;
-      margin: 1rem;
-    }
-    .instance.is-narrow {
-      min-width: 16em;
-      width: min-content;
-    }
-    .instance.is-wide {
-      width: 30%;
-      min-width: 30em;
-    }
-
-    .instance h2 {
-      width: 100%;
-      margin-block-start: 0;
-    }
-    .instance .status,
-    .instance p {
-      text-align: start;
-    }
-    .instance .versions {
-      text-align: end;
-    }
-
-    [hidden] {
-      display: none;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -142,20 +49,20 @@
     <a href="https://github.com/global-121/121-platform/releases/latest"
       ><img
         alt="GitHub latest release"
-        src="https://img.shields.io/github/v/release/global-121/121-platform?include_prereleases&label=latest%20release&sort=semver&style=flat-square&logo=github"
+        src="https://img.shields.io/github/v/release/global-121/121-platform?include_prereleases&label=latest%20release&sort=semver&style=flat-square&logo=github&labelColor=434c5e&color=d8dee9"
     /></a>
     <br />
     <br />
     <a href="https://manual.121.global"
       ><img
         alt="121 Manual"
-        src="https://img.shields.io/static/v1?style=flat-square&color=555&labelColor=4f22d7&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiIHZpZXdCb3g9IjAgMCA0NDggMjEzIj4NCiAgPHBhdGggZD0iTTEyMyAxODRjMCAxNy0xMiAyOS0zMiAyOXMtMzMtMTItMzMtMzBWOTloLTJzLTEyIDE0LTMwIDE0Yy0xNCAwLTI2LTExLTI2LTI2IDAtMTIgMTItMjMgMTItMjNsNDYtNDhTNzAgMiA5MSAyczMyIDEyIDMyIDMwem0xMDktMzZ2M2g1NmMyMCAwIDMyIDEyIDMyIDMwIDAgMTctMTIgMjktMzIgMjlIMTgwYy0yMSAwLTM1LTE1LTM1LTMyIDAtNzMgMTA4LTc5IDEwOC0xMDcgMC05LTgtMTYtMjQtMTYtMjIgMC0yNSAyMC00OCAyMC0yMiAwLTMyLTktMzItMjYgMC0yMyAyOS00OSA4MC00OSA1OSAwIDkxIDMyIDkxIDcxIDAgNTEtNTYgNTctODggNzd6bTIxNiAzNmMwIDE3LTEyIDI5LTMyIDI5cy0zMi0xMi0zMi0zMFY5OWgtM3MtMTIgMTQtMjkgMTRjLTE1IDAtMjYtMTEtMjYtMjYgMC0xMiAxMS0yMyAxMS0yM2w0Ny00OHMxMi0xNCAzMi0xNCAzMiAxMiAzMiAzMHoiLz4NCjwvc3ZnPg==&label=+&message=Manual"
+        src="https://img.shields.io/static/v1?style=flat-square&labelColor=4f22d7&logo=data:image/svg%2bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGZpbGw9IiNmZmYiIHZpZXdCb3g9IjAgMCA0NDggMjEzIj4NCiAgPHBhdGggZD0iTTEyMyAxODRjMCAxNy0xMiAyOS0zMiAyOXMtMzMtMTItMzMtMzBWOTloLTJzLTEyIDE0LTMwIDE0Yy0xNCAwLTI2LTExLTI2LTI2IDAtMTIgMTItMjMgMTItMjNsNDYtNDhTNzAgMiA5MSAyczMyIDEyIDMyIDMwem0xMDktMzZ2M2g1NmMyMCAwIDMyIDEyIDMyIDMwIDAgMTctMTIgMjktMzIgMjlIMTgwYy0yMSAwLTM1LTE1LTM1LTMyIDAtNzMgMTA4LTc5IDEwOC0xMDcgMC05LTgtMTYtMjQtMTYtMjIgMC0yNSAyMC00OCAyMC0yMiAwLTMyLTktMzItMjYgMC0yMyAyOS00OSA4MC00OSA1OSAwIDkxIDMyIDkxIDcxIDAgNTEtNTYgNTctODggNzd6bTIxNiAzNmMwIDE3LTEyIDI5LTMyIDI5cy0zMi0xMi0zMi0zMFY5OWgtM3MtMTIgMTQtMjkgMTRjLTE1IDAtMjYtMTEtMjYtMjYgMC0xMiAxMS0yMyAxMS0yM2w0Ny00OHMxMi0xNCAzMi0xNCAzMiAxMiAzMiAzMHoiLz4NCjwvc3ZnPg==&label=+&message=Manual&color=434c5e"
     /></a>
     <a
       href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.insights/components/121-manual/segmentationUsers"
       ><img
         alt="Dashboard: 121 Manual"
-        src="https://img.shields.io/badge/Dashboard-121%20Manual-lightblue?style=flat-square"
+        src="https://img.shields.io/badge/Dashboard-121%20Manual-5e81ac?style=flat-square&labelColor=434c5e"
     /></a>
   </section>
 
@@ -165,22 +72,22 @@
     <a href="https://githubstatus.com/"
       ><img
         alt="GitHub status"
-        src="https://img.shields.io/static/v1?style=flat-square&logo=github&logoColor=white&color=555&label=%20&message=GitHub+status"
+        src="https://img.shields.io/static/v1?style=flat-square&logo=github&logoColor=white&label=%20&message=GitHub+status&labelColor=434c5e&color=434c5e"
     /></a>
     <a href="https://status.npmjs.org/"
       ><img
         alt="npm status"
-        src="https://img.shields.io/static/v1?style=flat-square&logo=npm&logoColor=white&color=555&label=%20&message=npm+status"
+        src="https://img.shields.io/static/v1?style=flat-square&logo=npm&logoColor=white&label=%20&message=npm+status&labelColor=434c5e&color=434c5e"
     /></a>
     <a href="https://azure.status.microsoft/"
       ><img
         alt="Azure status"
-        src="https://img.shields.io/static/v1?style=flat-square&color=555&label=%20&message=Azure+status"
+        src="https://img.shields.io/static/v1?style=flat-square&label=%20&message=Azure+status&labelColor=434c5e&color=434c5e"
     /></a>
     <a href="https://status.twilio.com/"
       ><img
         alt="Twilio status"
-        src="https://img.shields.io/static/v1?style=flat-square&logo=twilio&logoColor=white&color=555&label=%20&message=Twilio+status"
+        src="https://img.shields.io/static/v1?style=flat-square&logo=twilio&logoColor=white&label=%20&message=Twilio+status&labelColor=434c5e&color=434c5e"
     /></a>
   </section>
 
@@ -191,7 +98,7 @@
       href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/1deaf824-df7a-4774-8dc4-0b4ad5bcaede"
       ><img
         alt="Dashboard: All Instances"
-        src="https://img.shields.io/badge/Dashboard-All%20Instances-lightblue?style=flat-square"
+        src="https://img.shields.io/badge/Dashboard-All%20Instances-5e81ac?style=flat-square&labelColor=434c5e"
     /></a>
 
     <br />
@@ -199,1078 +106,29 @@
     <a href="https://github.com/global-121/121-platform/actions"
       ><img
         alt="GitHub Actions: All"
-        src="https://img.shields.io/static/v1?style=flat-square&logo=github&logoColor=white&color=blue&label=GitHub+Actions&message=All"
+        src="https://img.shields.io/static/v1?style=flat-square&logo=github&logoColor=white&label=GitHub+Actions&message=All&labelColor=434c5e&color=88c0d0"
     /></a>
   </section>
 
   <hr />
 
-  <section
-    id="test"
-    class="instance is-wide"
-  >
-    <h2>Test 🚨</h2>
+<div id="instance-list-test"></div>
 
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-test/appServices"
-        ><img
-          alt="Azure App Service [test]"
-          src="https://img.shields.io/website?url=https://test.121.global/docs/&labelColor=hotpink&style=flat-square&label=121-service+[test]"
-      /></a>
+<hr />
 
-      <br />
+<div id="instance-list-demo"></div>
 
-      <a href="https://121-test.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Test"
-          src="https://img.shields.io/badge/Logs-Test-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
+<hr />
 
-    <p class="versions">
-      <a href="https://test.121.global/docs/"
-        ><img
-          alt="Service: 121-service [test]"
-          src="https://img.shields.io/badge/endpoint?url=https://test.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service+[test]"
-      /></a>
+<div id="instance-list-production"></div>
 
-      <br />
+<hr />
 
-      <a href="https://portal.test.121.global/"
-        ><img
-          alt="Interface: Portal [test]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.test.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal+[test]"
-      /></a>
+<div id="instance-list-other"></div>
 
-      <br />
+<hr />
 
-      <a href="https://new.portal.test.121.global/"
-        ><img
-          alt="Interface: New.Portal [test]"
-          src="https://img.shields.io/badge/endpoint?url=https://new.portal.test.121.global/VERSION.json&style=flat-square&label=New.Portal+[test]"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="staging"
-    class="instance is-wide"
-  >
-    <h2>Staging 🎭</h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-test/slots/staging/appServices"
-        ><img
-          alt="Azure App Service [staging]"
-          src="https://img.shields.io/website?url=https://staging.121.global/docs/&style=flat-square&label=121-service+[staging]"
-      /></a>
-
-      <br />
-
-      <a href="https://121-test-staging.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Staging"
-          src="https://img.shields.io/badge/Logs-Staging-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://staging.121.global/docs/"
-        ><img
-          alt="Service: 121-service [staging]"
-          src="https://img.shields.io/badge/endpoint?url=https://staging.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.staging.121.global/"
-        ><img
-          alt="Interface: Portal [staging]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.staging.121.global/VERSION.json&style=flat-square&label=Portal"
-      /></a>
-
-      <br />
-
-      <a href="https://new.portal.staging.121.global/"
-        ><img
-          alt="Interface: New.Portal [staging]"
-          src="https://img.shields.io/badge/endpoint?url=https://new.portal.staging.121.global/VERSION.json&style=flat-square&label=New.Portal+[staging]"
-      /></a>
-    </p>
-  </section>
-
-  <hr />
-
-  <section
-    id="demo"
-    class="instance is-wide"
-  >
-    <h2>
-      Demo
-      <img
-        alt=""
-        title="🏳️"
-        src="icons/favicon_demo.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-demo/appServices"
-        ><img
-          alt="Azure App Service [Demo]"
-          src="https://img.shields.io/website?url=https://demo.121.global/docs/&style=flat-square&label=121-service+[Demo]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/29e9faf8-f521-473d-a884-66b0bf667454"
-        ><img
-          alt="Dashboard: Demo"
-          src="https://img.shields.io/badge/Dashboard-Demo-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-demo.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Demo"
-          src="https://img.shields.io/badge/Logs-Demo-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://demo.121.global/docs/"
-        ><img
-          alt="Service: 121-service [Demo]"
-          src="https://img.shields.io/badge/endpoint?url=https://demo.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.demo.121.global/"
-        ><img
-          alt="Interface: Portal [Demo]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.demo.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-
-      <br />
-
-      <a href="https://new.portal.demo.121.global/"
-        ><img
-          alt="Interface: New.Portal [demo]"
-          src="https://img.shields.io/badge/endpoint?url=https://new.portal.demo.121.global/VERSION.json&style=flat-square&label=New.Portal+[demo]"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="training"
-    class="instance is-wide"
-  >
-    <h2>Training 🎓</h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-training/appServices"
-        ><img
-          alt="Azure App Service [Training]"
-          src="https://img.shields.io/website?url=https://training.121.global/docs/&style=flat-square&label=121-service+[Training]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Portal/dashboards/515052c9-220b-4c06-adeb-827f809e21e2"
-        ><img
-          alt="Dashboard: Training"
-          src="https://img.shields.io/badge/Dashboard-Training-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-training.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Training"
-          src="https://img.shields.io/badge/Logs-Training-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://training.121.global/docs/"
-        ><img
-          alt="Service: 121-service [Training]"
-          src="https://img.shields.io/badge/endpoint?url=https://training.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.training.121.global/"
-        ><img
-          alt="Interface: Portal [Training]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.training.121.global/VERSION.json&style=flat-square&label=Portal"
-      /></a>
-
-      <br />
-
-      <a href="https://new.portal.training.121.global/"
-        ><img
-          alt="Interface: New.Portal [training]"
-          src="https://img.shields.io/badge/endpoint?url=https://new.portal.training.121.global/VERSION.json&style=flat-square&label=New.Portal+[training]"
-      /></a>
-    </p>
-  </section>
-
-  <hr />
-
-  <section
-    id="drc"
-    class="instance"
-  >
-    <h2>
-      DRC
-      <img
-        alt=""
-        title="🇨🇩"
-        src="icons/favicon_drc.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-drc"
-        ><img
-          alt="Azure App Service [drc]"
-          src="https://img.shields.io/website?url=https://drc.121.global/docs/&style=flat-square&label=121-service+[DRC]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/39015109-d214-4bad-9333-f872e81a86f0-dashboard"
-        ><img
-          alt="Dashboard: DRC"
-          src="https://img.shields.io/badge/Dashboard-DRC-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-drc.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: DRC"
-          src="https://img.shields.io/badge/Logs-DRC-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://drc.121.global/docs/"
-        ><img
-          alt="Service: 121-service [drc]"
-          src="https://img.shields.io/badge/endpoint?url=https://drc.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.republiquedemocratiqueducongo.121.global/"
-        ><img
-          alt="Interface: Portal [drc]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.republiquedemocratiqueducongo.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="eswatini"
-    class="instance"
-  >
-    <h2>
-      Eswatini
-      <img
-        alt=""
-        title="🇸🇿"
-        src="icons/favicon_eswatini.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-eswatini"
-        ><img
-          alt="Azure App Service [Eswatini]"
-          src="https://img.shields.io/website?url=https://eswatini.121.global/docs/&style=flat-square&label=121-service+[Eswatini]"
-      /></a>
-
-      <br />
-
-      <a href="https://121-eswatini.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Eswatini"
-          src="https://img.shields.io/badge/Logs-Eswatini-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://eswatini.121.global/docs/"
-        ><img
-          alt="Service: 121-service [Eswatini]"
-          src="https://img.shields.io/badge/endpoint?url=https://eswatini.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.eswatini.121.global/"
-        ><img
-          alt="Interface: Portal [Eswatini]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.eswatini.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="ethiopia"
-    class="instance"
-  >
-    <h2>
-      Ethiopia
-      <img
-        alt=""
-        title="🇪🇹"
-        src="icons/favicon_ethiopia.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-ethiopia/appServices"
-        ><img
-          alt="Azure App Service [Ethiopia]"
-          src="https://img.shields.io/website?url=https://ethiopia.121.global/docs/&style=flat-square&label=121-service+[Ethiopia]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/ad8bc1db-2fe3-4eb0-86d1-3154cc0455a5"
-        ><img
-          alt="Dashboard: Ethiopia"
-          src="https://img.shields.io/badge/Dashboard-Ethiopia-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-ethiopia.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Ethiopia"
-          src="https://img.shields.io/badge/Logs-Ethiopia-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://ethiopia.121.global/docs/"
-        ><img
-          alt="Service: 121-service [Ethiopia]"
-          src="https://img.shields.io/badge/endpoint?url=https://ethiopia.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.ethiopia.121.global/"
-        ><img
-          alt="Interface: Portal [Ethiopia]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.ethiopia.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="ethiopia-staging"
-    class="instance"
-  >
-    <h2>
-      Ethiopia-Staging
-      <img
-        alt=""
-        title="🇪🇹"
-        src="icons/favicon_ethiopia-staging.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-ethiopia/slots/staging"
-        ><img
-          alt="Azure App Service [Ethiopia-Staging]"
-          src="https://img.shields.io/website?url=https://121-ethiopia-staging.azurewebsites.net/docs/&style=flat-square&label=121-service+[Ethiopia-Staging]"
-      /></a>
-
-      <br />
-
-      <a href="#"
-        ><img
-          alt="Dashboard: Ethiopia-staging"
-          src="https://img.shields.io/badge/Dashboard-Ethiopia--Staging-silver?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://121-ethiopia-staging.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Ethiopia-staging"
-          src="https://img.shields.io/badge/Logs-Ethiopia--Staging-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://121-ethiopia-staging.azurewebsites.net/docs/"
-        ><img
-          alt="Service: 121-service [Ethiopia-Staging]"
-          src="https://img.shields.io/badge/endpoint?url=https://121-ethiopia-staging.azurewebsites.net/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="#"
-        ><img
-          alt="Interface: Portal [Ethiopia-Staging]"
-          src="https://img.shields.io/badge/Portal-n/a-silver?style=flat-square"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="greece"
-    class="instance"
-  >
-    <h2>
-      Greece
-      <img
-        alt=""
-        title="🇬🇷"
-        src="icons/favicon_greece.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-greece/appServices"
-        ><img
-          alt="Azure App Service [Greece]"
-          src="https://img.shields.io/website?url=https://greece.121.global/docs/&style=flat-square&label=121-service+[Greece]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/29e9faf8-f521-473d-a884-66b0bf66794a"
-        ><img
-          alt="Dashboard: Greece"
-          src="https://img.shields.io/badge/Dashboard-Greece-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-greece.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Greece"
-          src="https://img.shields.io/badge/Logs-Greece-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://greece.121.global/docs/"
-        ><img
-          alt="Service: 121-service [Greece]"
-          src="https://img.shields.io/badge/endpoint?url=https://greece.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.greece.121.global/"
-        ><img
-          alt="Interface: Portal [Greece]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.greece.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="ivorycoast"
-    class="instance"
-  >
-    <h2>
-      Ivory Coast
-      <img
-        alt=""
-        title="🇨🇮"
-        src="icons/favicon_ivorycoast.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/ivorycoast"
-        ><img
-          alt="Azure App Service [Ivory Coast]"
-          src="https://img.shields.io/website?url=https://ivorycoast.121.global/docs/&style=flat-square&label=121-service+[Ivory+Coast]"
-      /></a>
-
-      <br />
-
-      <a href="https://121-ivorycoast.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Ivory Coast"
-          src="https://img.shields.io/badge/Logs-Ivory--Coast-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://ivorycoast.121.global/docs/"
-        ><img
-          alt="Service: 121-service [Ivory Coast]"
-          src="https://img.shields.io/badge/endpoint?url=https://ivorycoast.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.cotedivoire.121.global/"
-        ><img
-          alt="Interface: Portal [Ivory Coast]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.cotedivoire.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="kenya"
-    class="instance"
-  >
-    <h2>
-      Kenya
-      <img
-        alt=""
-        title="🇰🇪"
-        src="icons/favicon_kenya.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-krcs/appServices"
-        ><img
-          alt="Azure App Service [Kenya]"
-          src="https://img.shields.io/website?url=https://krcs.121.global/docs/&style=flat-square&label=121-service+[Kenya]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/65df5619-95bb-40d7-82f4-81ce280d626d"
-        ><img
-          alt="Dashboard: Kenya"
-          src="https://img.shields.io/badge/Dashboard-Kenya-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-krcs.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Kenya"
-          src="https://img.shields.io/badge/Logs-Kenya-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://krcs.121.global/docs/"
-        ><img
-          alt="Service: 121-service [Kenya]"
-          src="https://img.shields.io/badge/endpoint?url=https://krcs.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.krcs.121.global/"
-        ><img
-          alt="Interface: Portal [Kenya]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.krcs.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-      <br />
-      <a href="https://new.portal.krcs.121.global/"
-        ><img
-          alt="Interface: New.Portal [Kenya]"
-          src="https://img.shields.io/badge/endpoint?url=https://new.portal.krcs.121.global/VERSION.json&style=flat-square&label=New.Portal"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="nlrc"
-    class="instance"
-  >
-    <h2>
-      NLRC
-      <img
-        alt=""
-        title="🇳🇱"
-        src="icons/favicon_nl.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-NLRC/appServices"
-        ><img
-          alt="Azure App Service [NLRC]"
-          src="https://img.shields.io/website?url=https://nlrc.121.global/docs/&style=flat-square&label=121-service+[NLRC]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510global/providers/microsoft.portal/dashboards/bebf73b2-1110-4a2d-a05c-75d9aa903157"
-        ><img
-          alt="Dashboard: NLRC"
-          src="https://img.shields.io/badge/Dashboard-NLRC-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-nlrc.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: NLRC"
-          src="https://img.shields.io/badge/Logs-NLRC-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-    <p class="versions">
-      <a href="https://nlrc.121.global/docs/"
-        ><img
-          alt="Service: 121-service [NLRC]"
-          src="https://img.shields.io/badge/endpoint?url=https://nlrc.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.nlrc.121.global/"
-        ><img
-          alt="Interface: Portal [NLRC]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.nlrc.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-      <br />
-      <a href="https://new.portal.nlrc.121.global/"
-        ><img
-          alt="Interface: New.Portal [NLRC]"
-          src="https://img.shields.io/badge/endpoint?url=https://new.portal.nlrc.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=New.Portal"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="slovakia"
-    class="instance"
-  >
-    <h2>
-      Slovakia
-      <img
-        alt=""
-        title="🇸🇰"
-        src="icons/favicon_slovakia.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-slovakia"
-        ><img
-          alt="Azure App Service [slovakia]"
-          src="https://img.shields.io/website?url=https://slovakia.121.global/docs/&style=flat-square&label=121-service+[slovakia]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/c9dbeedf-353c-4a5a-b6e8-7a8098515c78-dashboard"
-        ><img
-          alt="Dashboard: Slovakia"
-          src="https://img.shields.io/badge/Dashboard-Slovakia-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-slovakia.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Slovakia"
-          src="https://img.shields.io/badge/Logs-Slovakia-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://slovakia.121.global/docs/"
-        ><img
-          alt="Service: 121-service [slovakia]"
-          src="https://img.shields.io/badge/endpoint?url=https://slovakia.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.slovakia.121.global/"
-        ><img
-          alt="Interface: Portal [slovakia]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.slovakia.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="somalia"
-    class="instance"
-  >
-    <h2>
-      Somalia
-      <img
-        alt=""
-        title="🇸🇴"
-        src="icons/favicon_somalia.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-somalia/appServices"
-        ><img
-          alt="Azure App Service [Somalia]"
-          src="https://img.shields.io/website?url=https://somalia.121.global/docs/&style=flat-square&label=121-service+[Somalia]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Portal/dashboards/934f46ed-2a07-484b-9886-aa5dbd1a7453"
-        ><img
-          alt="Dashboard: Somalia"
-          src="https://img.shields.io/badge/Dashboard-Somalia-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-somalia.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Somalia"
-          src="https://img.shields.io/badge/Logs-Somalia-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://somalia.121.global/docs/"
-        ><img
-          alt="Service: 121-service [Somalia]"
-          src="https://img.shields.io/badge/endpoint?url=https://somalia.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.somalia.121.global/"
-        ><img
-          alt="Interface: Portal [Somalia]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.somalia.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="sudan"
-    class="instance"
-  >
-    <h2>
-      Sudan
-      <img
-        alt=""
-        title="🇸🇴"
-        src="icons/favicon_sudan.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-sudan/appServices"
-        ><img
-          alt="Azure App Service [Sudan]"
-          src="https://img.shields.io/website?url=https://sudan.121.global/docs/&style=flat-square&label=121-service+[Sudan]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/49c20805-477e-40ec-b11b-8b96b730d82c-dashboard"
-        ><img
-          alt="Dashboard: Sudan"
-          src="https://img.shields.io/badge/Dashboard-Sudan-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-sudan.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Sudan"
-          src="https://img.shields.io/badge/Logs-Sudan-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://sudan.121.global/docs/"
-        ><img
-          alt="Service: 121-service [Sudan]"
-          src="https://img.shields.io/badge/endpoint?url=https://sudan.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.sudan.121.global/"
-        ><img
-          alt="Interface: Portal [Sudan]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.sudan.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="southafrica"
-    class="instance"
-  >
-    <h2>
-      South Africa
-      <img
-        alt=""
-        title="🇿🇦"
-        src="icons/favicon_southafrica.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-southafrica/appServices"
-        ><img
-          alt="Azure App Service [South Africa]"
-          src="https://img.shields.io/website?url=https://southafrica.121.global/docs/&style=flat-square&label=121-service+[South Africa]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/cd0219cd-9739-46b7-a292-54cb1fb639ef"
-        ><img
-          alt="Dashboard: South Africa"
-          src="https://img.shields.io/badge/Dashboard-South%20Africa-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-southafrica.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: South Africa"
-          src="https://img.shields.io/badge/Logs-South Africa-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://southafrica.121.global/docs/"
-        ><img
-          alt="Service: 121-service [South Africa]"
-          src="https://img.shields.io/badge/endpoint?url=https://southafrica.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.southafrica.121.global/"
-        ><img
-          alt="Interface: Portal [South Africa]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.southafrica.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-      <br />
-      <a href="https://new.portal.southafrica.121.global/"
-        ><img
-          alt="Interface: New.Portal [South Africa]"
-          src="https://img.shields.io/badge/endpoint?url=https://new.portal.southafrica.121.global/VERSION.json&style=flat-square&label=New.Portal"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="zambia"
-    class="instance"
-  >
-    <h2>
-      Zambia
-      <img
-        alt=""
-        title="🇿🇲"
-        src="icons/favicon_zambia.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-zambia/appServices"
-        ><img
-          alt="Azure App Service [Zambia]"
-          src="https://img.shields.io/website?url=https://zambia.121.global/docs/&style=flat-square&label=121-service+[Zambia]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.onmicrosoft.com/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Portal/dashboards/7c00bbd7-0cde-4d5e-99d2-78779274442a"
-        ><img
-          alt="Dashboard: Zambia"
-          src="https://img.shields.io/badge/Dashboard-Zambia-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-zambia.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Zambia"
-          src="https://img.shields.io/badge/Logs-Zambia-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://zambia.121.global/docs/"
-        ><img
-          alt="Service: 121-service [Zambia]"
-          src="https://img.shields.io/badge/endpoint?url=https://zambia.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.zambia.121.global/"
-        ><img
-          alt="Interface: Portal [Zambia]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.zambia.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-    </p>
-  </section>
-
-  <hr />
-
-  <section
-    id="helpachild"
-    class="instance"
-  >
-    <h2>
-      Help a Child
-      <img
-        alt=""
-        title="🅰️"
-        src="icons/favicon_helpachild.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-helpachild/appServices"
-        ><img
-          alt="Azure App Service [Help a Child]"
-          src="https://img.shields.io/website?url=https://helpachild.121.global/docs/&style=flat-square&label=121-service+[Help a child]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/79b93580-ceb0-4da7-a946-36f36026e1fa"
-        ><img
-          alt="Dashboard: Help a Child"
-          src="https://img.shields.io/badge/Dashboard-HelpAChild-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a href="https://121-helpachild.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: Help a child"
-          src="https://img.shields.io/badge/Logs-Help a Child-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://helpachild.121.global/docs/"
-        ><img
-          alt="Service: 121-service [Help a child]"
-          src="https://img.shields.io/badge/endpoint?url=https://helpachild.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.helpachild.121.global/"
-        ><img
-          alt="Interface: Portal [Help a child]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.helpachild.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-    </p>
-  </section>
-
-  <section
-    id="jre"
-    class="instance"
-  >
-    <h2>
-      Joint Response Ethiopia
-      <img
-        alt=""
-        title="🇪🇹"
-        src="icons/favicon_jrethiopia.ico"
-      />
-    </h2>
-
-    <p class="status">
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-dorcas-ethiopia/appServices"
-        ><img
-          alt="Azure App Service [jrethiopia]"
-          src="https://img.shields.io/website?url=https://jrethiopia.121.global/docs/&style=flat-square&label=121-service+[jrethiopia]"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/ad8bc1db-2fe3-4eb0-86d1-3154cc0455a5"
-        ><img
-          alt="Dashboard: JREthiopia"
-          src="https://img.shields.io/badge/Dashboard-JREthiopia-lightblue?style=flat-square"
-      /></a>
-
-      <br />
-
-      <a
-        href="https://121-dorcas-ethiopia.scm.azurewebsites.net/api/logs/docker"
-        ><img
-          alt="Logs: jrethiopia"
-          src="https://img.shields.io/badge/Logs-jrethiopia-lightblue?style=flat-square&logo=docker&logoColor=white"
-      /></a>
-    </p>
-
-    <p class="versions">
-      <a href="https://jrethiopia.121.global/docs/"
-        ><img
-          alt="Service: 121-service [jrethiopia]"
-          src="https://img.shields.io/badge/endpoint?url=https://jrethiopia.121.global/api/health/version&style=flat-square&logoColor=white&label=121-service"
-      /></a>
-
-      <br />
-
-      <a href="https://portal.jrethiopia.121.global/"
-        ><img
-          alt="Interface: Portal [jrethiopia]"
-          src="https://img.shields.io/badge/endpoint?url=https://portal.jrethiopia.121.global/VERSION.json&style=flat-square&logo=angular-universal&logoColor=white&label=Portal"
-      /></a>
-    </p>
-  </section>
-
-  <hr />
-
-  <section
+<section
     id="mock-test"
     class="instance is-narrow"
   >
@@ -1281,14 +139,14 @@
         href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-mock-test/appServices"
         ><img
           alt="Mock-Service [Test]"
-          src="https://img.shields.io/website?url=https://121-mock-test.azurewebsites.net/docs/&style=flat-square&label=Mock-Service+[test]"
+          src="https://img.shields.io/website?url=https://121-mock-test.azurewebsites.net/docs/&style=flat-square&label=Mock-Service+[test]&labelColor=434c5e2&up_color=a3be8c&down_color=bf616a"
       /></a>
       <br />
 
       <a href="https://121-mock-test.azurewebsites.net/docs/"
         ><img
           alt="Service: Mock-Service [Test]"
-          src="https://img.shields.io/badge/endpoint?url=https://121-mock-test.azurewebsites.net/api/instance/version&style=flat-square&logoColor=white&label=Mock-Service"
+          src="https://img.shields.io/badge/endpoint?url=https://121-mock-test.azurewebsites.net/api/instance/version&style=flat-square&logoColor=white&label=Mock-Service&labelColor=434c5e&color=d8dee9"
       /></a>
 
       <br />
@@ -1296,7 +154,7 @@
       <a href="https://121-mock-test.scm.azurewebsites.net/api/logs/docker"
         ><img
           alt="Logs: Test"
-          src="https://img.shields.io/badge/Logs-Test-lightblue?style=flat-square&logo=docker&logoColor=white"
+          src="https://img.shields.io/badge/Logs-Test-5e81ac?style=flat-square&logo=docker&logoColor=white&labelColor=434c5e"
       /></a>
     </p>
   </section>
@@ -1312,14 +170,14 @@
         href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-mock-staging/appServices"
         ><img
           alt="Mock-Service [Staging]"
-          src="https://img.shields.io/website?url=https://121-mock-staging.azurewebsites.net/docs/&style=flat-square&label=Mock-Service+[staging]"
+          src="https://img.shields.io/website?url=https://121-mock-staging.azurewebsites.net/docs/&style=flat-square&label=Mock-Service+[staging]&labelColor=434c5e&up_color=a3be8c&down_color=bf616a"
       /></a>
       <br />
 
       <a href="https://121-mock-staging.azurewebsites.net/docs/"
         ><img
           alt="Service: Mock-Service [Staging]"
-          src="https://img.shields.io/badge/endpoint?url=https://121-mock-staging.azurewebsites.net/api/instance/version&style=flat-square&logoColor=white&label=Mock-Service"
+          src="https://img.shields.io/badge/endpoint?url=https://121-mock-staging.azurewebsites.net/api/instance/version&style=flat-square&logoColor=white&label=Mock-Service&labelColor=434c5e&color=d8dee9"
       /></a>
 
       <br />
@@ -1327,7 +185,7 @@
       <a href="https://121-mock-staging.scm.azurewebsites.net/api/logs/docker"
         ><img
           alt="Logs: Staging"
-          src="https://img.shields.io/badge/Logs-Staging-lightblue?style=flat-square&logo=docker&logoColor=white"
+          src="https://img.shields.io/badge/Logs-Staging-5e81ac?style=flat-square&logo=docker&logoColor=white&labelColor=434c5e"
       /></a>
     </p>
   </section>
@@ -1343,14 +201,14 @@
         href="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourceGroups/510-121/providers/Microsoft.Web/sites/121-mock/appServices"
         ><img
           alt="Mock-Service [Production]"
-          src="https://img.shields.io/website?url=https://121-mock.azurewebsites.net/docs/&style=flat-square&label=Mock-Service+[production]"
+          src="https://img.shields.io/website?url=https://121-mock.azurewebsites.net/docs/&style=flat-square&label=Mock-Service+[production]&labelColor=434c5e&up_color=a3be8c&down_color=bf616a"
       /></a>
       <br />
 
       <a href="https://121-mock.azurewebsites.net/docs/"
         ><img
           alt="Service: Mock-Service [Production]"
-          src="https://img.shields.io/badge/endpoint?url=https://121-mock.azurewebsites.net/api/instance/version&style=flat-square&logoColor=white&label=Mock-Service"
+          src="https://img.shields.io/badge/endpoint?url=https://121-mock.azurewebsites.net/api/instance/version&style=flat-square&logoColor=white&label=Mock-Service&labelColor=434c5e&color=d8dee9"
       /></a>
 
       <br />
@@ -1358,7 +216,7 @@
       <a href="https://121-mock.scm.azurewebsites.net/api/logs/docker"
         ><img
           alt="Logs: Production"
-          src="https://img.shields.io/badge/Logs-Production-lightblue?style=flat-square&logo=docker&logoColor=white"
+          src="https://img.shields.io/badge/Logs-Production-5e81ac?style=flat-square&logo=docker&logoColor=white&labelColor=434c5e"
       /></a>
     </p>
   </section>
@@ -1368,8 +226,10 @@
   <footer>
     <a href="https://github.com/global-121/status"
       ><img
-        src="https://img.shields.io/badge/GitHub-view%20source-blue?logo=github"
+        src="https://img.shields.io/badge/GitHub-view%20source-88c0d0?style=flat-square&logo=github&labelColor=434c5e"
         alt="View Source on GitHub"
     /></a>
   </footer>
+
+  <script type="module" src="./scripts/index.js"></script>
 </body>
