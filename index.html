@@ -240,13 +240,33 @@
   </header>
 
   <section id="release">
+    <a
+      href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/1deaf824-df7a-4774-8dc4-0b4ad5bcaede"
+      ><img
+        alt="Dashboard: All Instances"
+        src="https://img.shields.io/badge/Dashboard-All%20Instances-lightblue?style=flat-square"
+    /></a>
+
+    <a
+      href="https://510global.matomo.cloud/index.php?module=CoreHome&action=index&date=last30&period=range&idSite=17"
+      ><img
+        alt="Metrics: All Portals"
+        src="https://img.shields.io/badge/Metrics-All%20Portals-lightblue?style=flat-square&logo=matomo&logoColor=white"
+    /></a>
+
+    <a href="https://github.com/global-121/121-platform/actions"
+      ><img
+        alt="GitHub Actions: All"
+        src="https://img.shields.io/static/v1?style=flat-square&logo=github&logoColor=white&color=blue&label=GitHub+Actions&message=All"
+    /></a>
+
     <a href="https://github.com/global-121/121-platform/releases/latest"
       ><img
         alt="GitHub latest release"
         src="https://img.shields.io/github/v/release/global-121/121-platform?include_prereleases&label=latest%20release&sort=semver&style=flat-square&logo=github"
     /></a>
-    <br />
-    <br />
+  </section>
+  <section>
     <a href="https://manual.121.global"
       ><img
         alt="121 Manual"
@@ -259,8 +279,6 @@
         src="https://img.shields.io/badge/Dashboard-121%20Manual-lightblue?style=flat-square"
     /></a>
   </section>
-
-  <hr />
 
   <section id="status">
     <a href="https://githubstatus.com/"
@@ -297,31 +315,7 @@
 
   <hr />
 
-  <section id="monitoring">
-    <a
-      href="https://portal.azure.com/#@rodekruis.nl/dashboard/arm/subscriptions/b2d243bd-7fab-4a8a-8261-a725ee0e3b47/resourcegroups/510-121/providers/microsoft.portal/dashboards/1deaf824-df7a-4774-8dc4-0b4ad5bcaede"
-      ><img
-        alt="Dashboard: All Instances"
-        src="https://img.shields.io/badge/Dashboard-All%20Instances-lightblue?style=flat-square"
-    /></a>
-
-    <a
-      href="https://510global.matomo.cloud/index.php?module=CoreHome&action=index&date=last30&period=range&idSite=17"
-      ><img
-        alt="Metrics: All Portals"
-        src="https://img.shields.io/badge/Metrics-All%20Portals-lightblue?style=flat-square&logo=matomo&logoColor=white"
-    /></a>
-
-    <br />
-
-    <a href="https://github.com/global-121/121-platform/actions"
-      ><img
-        alt="GitHub Actions: All"
-        src="https://img.shields.io/static/v1?style=flat-square&logo=github&logoColor=white&color=blue&label=GitHub+Actions&message=All"
-    /></a>
-  </section>
-
-  <hr />
+  <!-- Development -->
 
   <instance-121
     class="is-wide"
@@ -337,7 +331,7 @@
     data-docker-logs="https://121-test-staging.scm.azurewebsites.net/api/logs/docker"
   ></instance-121>
 
-  <hr />
+  <!-- Internal -->
 
   <instance-121
     class="is-wide"
@@ -350,7 +344,7 @@
     data-icon="🎓"
   ></instance-121>
 
-  <hr />
+  <!-- Production -->
 
   <instance-121
     id="benin"
@@ -423,7 +417,7 @@
     data-matomo-site="30"
   ></instance-121>
 
-  <!-- <hr /> -->
+  <!-- NGOs -->
 
   <instance-121
     id="helpachild"
@@ -438,7 +432,7 @@
     data-matomo-site="32"
   ></instance-121>
 
-  <hr />
+  <!-- Client-specific test/staging -->
 
   <instance-121
     id="ethiopia-staging"
@@ -449,7 +443,7 @@
     data-portal="false"
   ></instance-121>
 
-  <hr />
+  <!-- Mock-Service -->
 
   <instance-121
     id="mock-test"
