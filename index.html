@@ -104,6 +104,9 @@
       margin-block-start: 0.5rem;
       margin-block-end: 0rem;
     }
+    .instance a {
+      display: inline-flex;
+    }
     .instance .status,
     .instance p {
       text-align: start;
@@ -111,9 +114,49 @@
     .instance .versions {
       text-align: end;
     }
-
-    [hidden] {
-      display: none;
+    @media (min-width: 60rem) {
+      .instance.is-wide,
+      .instance {
+        display: flex;
+        align-items: center;
+        margin: unset;
+        margin-inline: auto;
+        width: unset;
+        min-width: unset;
+        max-width: 75rem;
+        border-width: 0;
+        border-bottom-width: 1px;
+        padding-block: 0.33rem;
+        opacity: 0.75;
+      }
+      .instance:focus-within,
+      .instance:hover,
+      .instance:focus {
+        opacity: 1;
+      }
+      .instance p,
+      .instance h2 {
+        font-size: unset;
+        line-height: 1.2;
+        margin: unset;
+      }
+      .instance h2 {
+        text-align: start;
+        font-weight: normal;
+      }
+      .instance p {
+        display: inline-flex;
+        gap: 0.33rem;
+      }
+      .instance h2 {
+        flex-basis: 25%;
+      }
+      .instance .status {
+        flex-basis: 35%;
+      }
+      .instance .versions {
+        flex-basis: 33%;
+      }
     }
   </style>
 
@@ -471,8 +514,6 @@
     data-app-insights="false"
     data-portal="false"
   ></instance-121>
-
-  <hr />
 
   <footer>
     <a href="https://github.com/global-121/status"
