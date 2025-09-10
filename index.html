@@ -31,7 +31,19 @@
   <style>
     :root {
       accent-color: #e9a6a5;
+      --text: #444;
+      --border: silver;
+      --background: #fff;
     }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --text: #eee;
+        --border: gray;
+        --background: #121121;
+      }
+    }
+
     * {
       box-sizing: border-box;
     }
@@ -39,8 +51,8 @@
       font: 100% / 1.5 monospace, monospace;
       margin: 0;
       padding: 0;
-      background: #fff;
-      color: #444;
+      background: var(--background);
+      color: var(--text);
       text-align: center;
     }
 
@@ -65,7 +77,7 @@
 
     hr {
       border: 0;
-      border-top: 1px dashed silver;
+      border-top: 1px dashed var(--border);
       margin: 1rem 0;
     }
 
@@ -90,7 +102,7 @@
       width: 20%;
       min-width: 22em;
       padding: 0 0.5rem;
-      border: 1px solid rgba(0, 0, 0, 0.2);
+      border: 1px solid var(--border);
       margin: 0.5rem;
     }
     .instance.is-wide {
