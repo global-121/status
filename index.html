@@ -230,13 +230,19 @@
       : ''
   }
   ${
-    matomoSite
+    sshDeeplink
       ? `
-    <a href="https://510global.matomo.cloud/index.php?module=CoreHome&action=index&period=range&date=last30&idSite=${matomoSite}"
-       title="Matomo | Usage: ${label}"
-    ><img alt="" src="https://img.shields.io/static/v1?style=flat-square&logo=matomo&logoColor=white&color=lightblue&labelColor=555&label=%20&message=Usage" /></a>
-    <br />
-    `
+    <a href="${sshDeeplink}"
+       title="SSH Deeplink: ${label}"
+    ><img alt="" src="https://img.shields.io/static/v1?style=flat-square&color=lightblue&labelColor=555&label=%23_+&message=SSH" /></a>`
+      : ''
+  }
+  ${
+    dockerLogs
+      ? `
+    <a href="${dockerLogs}"
+       title="Docker | Logs: ${label}"
+    ><img alt="" src="https://img.shields.io/static/v1?style=flat-square&color=lightblue&labelColor=555&logo=docker&logoColor=white&label=+&message=Logs" /></a>`
       : ''
   }
   ${
@@ -250,21 +256,14 @@
       : ''
   }
   ${
-    dockerLogs
+    matomoSite
       ? `
-    <a href="${dockerLogs}"
-       title="Docker | Logs: ${label}"
-    ><img alt="" src="https://img.shields.io/static/v1?style=flat-square&color=lightblue&labelColor=555&logo=docker&logoColor=white&label=+&message=Logs" /></a>`
+    <a href="https://510global.matomo.cloud/index.php?module=CoreHome&action=index&period=range&date=last30&idSite=${matomoSite}"
+       title="Matomo | Usage: ${label}"
+    ><img alt="" src="https://img.shields.io/static/v1?style=flat-square&logo=matomo&logoColor=white&color=lightblue&labelColor=555&label=%20&message=Usage" /></a>
+    <br />
+    `
       : ''
-  }
-
-  ${
-    sshDeeplink
-              ? `
-    <a href="${sshDeeplink}"
-       title="SSH Deeplink: ${label}"
-    ><img alt="" src="https://img.shields.io/static/v1?style=flat-square&color=lightblue&labelColor=555&label=%23_+&message=SSH" /></a>`
-              : ''
   }
   </p>
 
