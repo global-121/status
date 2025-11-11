@@ -204,6 +204,7 @@
             this.dataset.dockerLogs,
             `https://121-${name}.scm.azurewebsites.net/api/logs/docker`,
           );
+          const sshDeeplink = `https://121-${name}.scm.azurewebsites.net/webssh/host`;
           const matomoSite = this.dataset.matomoSite;
           const portalLink = !isDisabled(this.dataset.portal);
           const apiVersionEndpoint = this.id.startsWith('mock')
@@ -255,6 +256,15 @@
        title="Docker | Logs: ${label}"
     ><img alt="" src="https://img.shields.io/static/v1?style=flat-square&color=lightblue&labelColor=555&logo=docker&logoColor=white&label=+&message=Logs" /></a>`
       : ''
+  }
+
+  ${
+    sshDeeplink
+              ? `
+    <a href="${sshDeeplink}"
+       title="SSH Deeplink: ${label}"
+    ><img alt="" src="https://img.shields.io/static/v1?style=flat-square&color=lightblue&labelColor=555&label=%20+&message=SSH" /></a>`
+              : ''
   }
   </p>
 
