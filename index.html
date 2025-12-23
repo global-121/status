@@ -188,8 +188,8 @@
           const icon = this.dataset.icon;
           const name = valueOverrideOrFallback(this.dataset.name, this.id);
           const origin = valueOverrideOrFallback(
-            this.dataset.origin,
-            `${name}.121.global`,
+            this.dataset.origin.toLowerCase(),
+            `${name.toLowerCase()}.121.global`,
           );
           const label = valueOverrideOrFallback(this.dataset.label, name);
           const appService = valueOverrideOrFallback(
