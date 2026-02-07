@@ -96,35 +96,43 @@
     }
 
     .instance {
-      display: inline-flex;
+      display: flex;
       flex-flow: row wrap;
-      justify-content: space-around;
-      width: 20%;
-      min-width: 22em;
-      padding: 0 0.5rem;
-      border: 1px solid var(--border);
-      margin: 0.5rem;
-    }
-    .instance.is-wide {
-      width: 30%;
-      min-width: 30em;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      border: 0 solid var(--border);
+      border-bottom-width: 1px;
+      margin: 0.5rem auto;
+
+      max-width: 33rem;
     }
 
     .instance h2 {
       text-transform: capitalize;
-      width: 100%;
-      margin-block-start: 0.5rem;
-      margin-block-end: 0rem;
+      flex-basis: 100%;
+      margin: 0.5rem 0;
     }
     .instance a {
       display: inline-flex;
+    }
+    .instance p {
+      margin: 0 0 0.5rem 0;
     }
     .instance .status,
     .instance p {
       text-align: start;
     }
+    .instance .status {
+      flex-basis: 60%;
+    }
     .instance .versions {
+      flex-basis: 40%;
       text-align: end;
+    }
+
+    #test .instance .status,
+    #test .instance .versions {
+      flex-basis: 45%;
     }
     @media (min-width: 60rem) {
       .instance.is-wide,
@@ -251,7 +259,6 @@
     <a href="${appInsights}"
        title="AppInsights | Analytics: ${label}"
     ><img alt="" src="https://img.shields.io/static/v1?style=flat-square&color=lightblue&labelColor=555&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA3MiA3MiI+PGcgZmlsbD0iI2ZmZiIgc3Ryb2tlPSIjZmZmIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIHN0cm9rZS13aWR0aD0iMiIgZD0iTTUyLjU1IDIzLjc1YzAgMy45ODUtMS43ODUgNS45MDgtMy43NTQgMTAuNS0uNTAzIDEuMTcyLTQuMjExIDEzLjM4LTQuMjExIDEzLjM4aC0xNy4xN3MtMi45ODEtMTEuNjctMy41NDYtMTIuNjJjLTIuMzctMy45OTgtNC40MTktNi45MS00LjQxOS0xMS4yNkMxOS40NSAxNC42MDkgMjYuODYgNy4yIDM2IDcuMnMxNi41NSA3LjQxIDE2LjU1IDE2LjU1Wk0zNiA0Ny4yMlYzNS4yOG01Ljk3IDBIMzAuMDMiLz48cGF0aCBzdHJva2Utd2lkdGg9IjEuNjk2IiBkPSJNNDQuMTYgNTguNzljMCAzLjI0LTMuNjUxIDUuODY3LTguMTU1IDUuODY3UzI3Ljg1IDYyLjAzIDI3Ljg1IDU4Ljc5aDE2LjMxWiIvPjxwYXRoIHN0cm9rZS13aWR0aD0iMS45NjUiIGQ9Im0yNy45OSA1NC45OCAxNi4wMi0zLjQ3Ii8+PHBhdGggc3Ryb2tlLXdpZHRoPSIyIiBkPSJtMzguMiA1Ni4wNyA1Ljc4LTEuMThNMjguMDIgNTEuNmw1Ljc4LTEuMTgiLz48L2c+PC9zdmc+&label=+&message=AppInsights"/></a>
-    <br />
   `
       : ''
   }
@@ -395,13 +402,11 @@
   <!-- Development -->
 
   <instance-121
-    class="is-wide"
     id="test"
     data-icon="🚨"
   ></instance-121>
 
   <instance-121
-    class="is-wide"
     id="staging"
     data-icon="🎭"
     data-app-service="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/a9fac20b-7963-401a-84e8-3cf91aea89ef/resourceGroups/121-Platform/providers/Microsoft.Web/sites/121-test/slots/staging"
@@ -410,13 +415,9 @@
 
   <!-- Internal -->
 
-  <instance-121
-    class="is-wide"
-    id="demo"
-  ></instance-121>
+  <instance-121 id="demo"></instance-121>
 
   <instance-121
-    class="is-wide"
     id="training"
     data-icon="🎓"
   ></instance-121>
