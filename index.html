@@ -129,10 +129,30 @@
       flex-basis: 40%;
       text-align: end;
     }
+    @media (max-width: 52rem) {
+      #test .instance .status,
+      #test .instance .versions {
+        flex-basis: 45%;
+      }
+    }
 
-    #test .instance .status,
-    #test .instance .versions {
-      flex-basis: 45%;
+    @media (min-width: 52rem) {
+      .instance {
+        align-items: start;
+        max-width: none;
+      }
+      .instance h2 {
+        text-align: start;
+        line-height: 1.2;
+        margin: 0;
+        flex-basis: 36%;
+      }
+      .instance .status {
+        flex-basis: 40%;
+      }
+      .instance .versions {
+        flex-basis: 20%;
+      }
     }
     @media (min-width: 60rem) {
       .instance.is-wide,
