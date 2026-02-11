@@ -140,6 +140,12 @@
       .instance {
         align-items: start;
         max-width: none;
+        opacity: 0.75;
+      }
+      .instance:focus-within,
+      .instance:hover,
+      .instance:focus {
+        opacity: 1;
       }
       .instance h2 {
         text-align: start;
@@ -155,47 +161,38 @@
       }
     }
     @media (min-width: 60rem) {
-      .instance.is-wide,
       .instance {
-        display: flex;
         align-items: center;
-        margin: unset;
-        margin-inline: auto;
-        width: unset;
-        min-width: unset;
-        max-width: 75rem;
-        border-width: 0;
-        border-bottom-width: 1px;
-        padding-block: 0.5rem;
-        opacity: 0.75;
-      }
-      .instance:focus-within,
-      .instance:hover,
-      .instance:focus {
-        opacity: 1;
+        max-width: 64rem;
       }
       .instance p,
       .instance h2 {
+        margin: 0;
         font-size: unset;
-        line-height: 1.2;
-        margin: unset;
-      }
-      .instance h2 {
-        text-align: start;
         font-weight: normal;
       }
-      .instance p {
+      .instance .status,
+      .instance .versions {
         display: inline-flex;
         gap: 0.33rem;
       }
       .instance h2 {
-        flex-basis: 25%;
+        flex-basis: 29%;
       }
       .instance .status {
-        flex-basis: 35%;
+        flex-basis: 49%;
+        justify-content: start;
       }
       .instance .versions {
-        flex-basis: 33%;
+        flex-basis: 22%;
+        justify-content: end;
+      }
+
+      #test .instance .versions {
+        flex-wrap: wrap;
+      }
+      #test .instance .versions br {
+        display: none;
       }
     }
   </style>
