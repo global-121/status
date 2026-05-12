@@ -229,7 +229,7 @@
           );
           const dockerLogs = valueOverrideOrFallback(
             this.dataset.dockerLogs,
-            `https://portal.azure.com/#blade/AppInsightsExtension/UsageNotebookBlade/ComponentId/%2Fsubscriptions%2Fa9fac20b-7963-401a-84e8-3cf91aea89ef%2FresourceGroups%2F121-Platform%2Fproviders%2FMicrosoft.OperationalInsights%2Fworkspaces%2Fb2d243bd-7fab-4a8a-8261-a725ee0e3b47-510-121-WEU/ConfigurationId/%2Fsubscriptions%2Fa9fac20b-7963-401a-84e8-3cf91aea89ef%2Fresourcegroups%2F121-platform%2Fproviders%2Fmicrosoft.insights%2Fworkbooks%2F47cc7d5e-d44f-496d-b6aa-94ce1e2950c0/WorkbookTemplateName/Docker%20logger/NotebookParams/%7B%22selected_app%22%3A%22%2Fsubscriptions%2Fa9fac20b-7963-401a-84e8-3cf91aea89ef%2Fresourcegroups%2F121-platform%2Fproviders%2Fmicrosoft.web%2Fsites%2F121-${name}%22%2C%22TimeRange%22%3A%7B%22durationMs%22%3A86400000%7D%7D`,
+            `https://portal.azure.com/#blade/AppInsightsExtension/WorkbookViewerBlade/ComponentId/%2Fsubscriptions%2Fa9fac20b-7963-401a-84e8-3cf91aea89ef%2FresourceGroups%2F121-Platform%2Fproviders%2FMicrosoft.OperationalInsights%2Fworkspaces%2Fb2d243bd-7fab-4a8a-8261-a725ee0e3b47-510-121-WEU/ConfigurationId/%2Fsubscriptions%2Fa9fac20b-7963-401a-84e8-3cf91aea89ef%2Fresourcegroups%2F121-platform%2Fproviders%2Fmicrosoft.insights%2Fworkbooks%2F47cc7d5e-d44f-496d-b6aa-94ce1e2950c0/WorkbookTemplateName/Docker%20logger/NotebookParams/%7B%22selected_app%22%3A%22%2Fsubscriptions%2Fa9fac20b-7963-401a-84e8-3cf91aea89ef%2Fresourcegroups%2F121-platform%2Fproviders%2Fmicrosoft.web%2Fsites%2F121-${name}%22%7D`,
           );
           const sshDeeplink = `https://121-${name}.scm.azurewebsites.net/webssh/host`;
           const matomoSite = this.dataset.matomoSite;
@@ -430,7 +430,7 @@
     id="staging"
     data-icon="🎭"
     data-app-service="https://portal.azure.com/#@rodekruis.nl/resource/subscriptions/a9fac20b-7963-401a-84e8-3cf91aea89ef/resourceGroups/121-Platform/providers/Microsoft.Web/sites/121-test/slots/staging"
-    data-docker-logs="https://121-test-staging.scm.azurewebsites.net/api/logs/docker"
+    data-docker-logs="https://portal.azure.com/#blade/AppInsightsExtension/WorkbookViewerBlade/ComponentId/%2Fsubscriptions%2Fa9fac20b-7963-401a-84e8-3cf91aea89ef%2FresourceGroups%2F121-Platform%2Fproviders%2FMicrosoft.OperationalInsights%2Fworkspaces%2Fb2d243bd-7fab-4a8a-8261-a725ee0e3b47-510-121-WEU/ConfigurationId/%2Fsubscriptions%2Fa9fac20b-7963-401a-84e8-3cf91aea89ef%2Fresourcegroups%2F121-platform%2Fproviders%2Fmicrosoft.insights%2Fworkbooks%2F47cc7d5e-d44f-496d-b6aa-94ce1e2950c0/WorkbookTemplateName/Docker%20logger/NotebookParams/%7B%22selected_app%22%3A%22%2Fsubscriptions%2Fa9fac20b-7963-401a-84e8-3cf91aea89ef%2Fresourcegroups%2F121-platform%2Fproviders%2Fmicrosoft.web%2Fsites%2F121-test%2Fslots%2Fstaging%22%7D"
   ></instance-121>
 
   <!-- Internal -->
@@ -568,6 +568,7 @@
     data-origin="121-ethiopia-staging.azurewebsites.net"
     data-app-service="https://portal.azure.com/#@rodekruis.onmicrosoft.com/resource/subscriptions/a9fac20b-7963-401a-84e8-3cf91aea89ef/resourceGroups/121-Platform/providers/Microsoft.Web/sites/121-ethiopia/slots/staging"
     data-app-insights="false"
+    data-docker-logs="https://portal.azure.com/#blade/AppInsightsExtension/WorkbookViewerBlade/ComponentId/%2Fsubscriptions%2Fa9fac20b-7963-401a-84e8-3cf91aea89ef%2FresourceGroups%2F121-Platform%2Fproviders%2FMicrosoft.OperationalInsights%2Fworkspaces%2Fb2d243bd-7fab-4a8a-8261-a725ee0e3b47-510-121-WEU/ConfigurationId/%2Fsubscriptions%2Fa9fac20b-7963-401a-84e8-3cf91aea89ef%2Fresourcegroups%2F121-platform%2Fproviders%2Fmicrosoft.insights%2Fworkbooks%2F47cc7d5e-d44f-496d-b6aa-94ce1e2950c0/WorkbookTemplateName/Docker%20logger/NotebookParams/%7B%22selected_app%22%3A%22%2Fsubscriptions%2Fa9fac20b-7963-401a-84e8-3cf91aea89ef%2Fresourcegroups%2F121-platform%2Fproviders%2Fmicrosoft.web%2Fsites%2F121-ethiopia%2Fslots%2Fstaging%22%7D"
     data-portal="false"
   ></instance-121>
 
