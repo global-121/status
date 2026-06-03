@@ -4,5 +4,14 @@
   "homepage": "https://status.121.global/",
   "license": "Apache-2.0",
   "repository": "github:global-121/status",
-  "private": true
+  "private": true,
+  "prettier": {
+    "$docs": "https://prettier.io/docs/en/configuration",
+    "arrowParens": "always",
+    "editorconfig": true,
+    "semi": true,
+    "singleAttributePerLine": true,
+    "singleQuote": true,
+    "trailingComma": "all"
+  }
 }
